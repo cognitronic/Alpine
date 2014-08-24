@@ -1,9 +1,49 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="alpine"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" ng-app="alpine"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" ng-app="alpine"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="alpine"> <!--<![endif]-->
 <head>
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grower Payments</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- endbuild -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
 </head>
 <body>
 
+    <div ui-view="header"></div>
+    <loading></loading>
+    <div ui-view="main-container"></div>
+    <div ui-view="footer"></div>
+
+    <script src="app.js"></script>
+    <script src="vendor/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="vendor/restangular/dist/restangular.js"></script>
+    <script src="vendor/lodash/dist/lodash.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendor/underscore/underscore.js"></script>
+
+    <script src="common/loader-directive.js"></script>
+    <script src="common/constants.js"></script>
+    <script src="reports/reports-controller.js"></script>
+    <script src="schedule/schedule-controller.js"></script>
+    <script src="profile/profile-controller.js"></script>
+    <script src="common/layout/header-controller.js"></script>
+    <script src="common/layout/footer-controller.js"></script>
+    <script src="common/security/authentication-service.js"></script>
+    <script src="common/security/no-access-controller.js"></script>
 </body>
 </html>
