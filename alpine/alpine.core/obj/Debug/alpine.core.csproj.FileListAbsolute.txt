@@ -1,0 +1,9 @@
+c:\Projects\Alpine\alpine\alpine.core\bin\Debug\alpine.core.dll
+c:\Projects\Alpine\alpine\alpine.core\bin\Debug\alpine.core.pdb
+c:\Projects\Alpine\alpine\alpine.core\bin\Debug\MongoDB.Bson.dll
+c:\Projects\Alpine\alpine\alpine.core\bin\Debug\MongoDB.Driver.dll
+c:\Projects\Alpine\alpine\alpine.core\bin\Debug\MongoDB.Bson.xml
+c:\Projects\Alpine\alpine\alpine.core\bin\Debug\MongoDB.Driver.xml
+c:\Projects\Alpine\alpine\alpine.core\obj\Debug\alpine.core.csprojResolveAssemblyReference.cache
+c:\Projects\Alpine\alpine\alpine.core\obj\Debug\alpine.core.dll
+c:\Projects\Alpine\alpine\alpine.core\obj\Debug\alpine.core.pdb
