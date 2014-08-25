@@ -5,7 +5,7 @@
 (function(){
     'use strict';
 
-    var NoAccessController = function($scope){
+    var NoAccessController = function($scope, Constants){
 
         var _message = '';
 
@@ -14,5 +14,5 @@
         };
     };
 
-    angular.module('alpine').controller('NoAccessController', ['$scope', NoAccessController]);
+    ramAngularApp.module.controller('NoAccessController', ['$scope', 'Constants', NoAccessController]);
 })();

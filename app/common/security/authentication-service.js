@@ -4,114 +4,53 @@
 
 (function(){
     'use strict';
-    var AuthenticationService = function($scope, $http, $state, $rootScope, Constants){
-        var _authorizationConfig = {
+    var AuthenticationService = function($http, $state, $rootScope, RestService, CacheService, Constants){
 
-            /* List all the roles you wish to use in the app
-             * You have a max of 31 before the bit shift pushes the accompanying integer out of
-             * the memory footprint for an integer
-             */
-            roles :[
-                'public',
-                'user',
-                'office',
-                'sitemanager',
-                'executive',
-                'admin',
-                'inivsible'],
+        var _accessLevels = ramRoutingAccessConfig.accessLevels;
+        var _userRoles = ramRoutingAccessConfig.userRoles;
 
-            /*
-             Build out all the access levels you want referencing the roles listed above
-             You can use the "*" symbol to represent access to all roles
-             */
-            accessLevels : {
-                'public' : "*",
-                'anon': ['public', 'admin', 'executive'],
-                'user' : ['user', 'admin'],
-                'office': ['office', 'executive', 'admin'],
-                'executive': ['executive', 'admin'],
-                'admin': ['admin'],
-                'invisible': []
-            }
+        var _login = function(creds){
 
+            var successCb = function(data){
+                data.then(function(user){
+                    if(user){
+                        CacheService.setItem(CacheService.Items.SelectedUser.fullProfile, user);
+                        $state.go('root.profile');
+                    } else {
+                        CacheService.removeItem(CacheService.Items.SelectedUser.fullProfile);
+                        return Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT;
+                        console.log('invalid login');
+                    }
+                });
+
+            };
+
+            RestService.postData(RestService.URLS.LOGIN_URL, creds, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT);
         };
 
-        /*
-         Method to build a distinct bit mask for each role
-         It starts off with "1" and shifts the bit to the left for each element in the
-         roles array parameter
-         */
-        var _buildRoles = function(roles){
-            var bitMask = "01";
-            var userRoles = {};
-
-            for(var role in roles){
-                var intCode = parseInt(bitMask, 2);
-                userRoles[roles[role]] = {
-                    bitMask: intCode,
-                    title: roles[role]
-                };
-                bitMask = (intCode << 1 ).toString(2)
-            }
-
-            return userRoles;
+        var _isAuthenticated = function(){
+            return CacheService.getItem(CacheService.Items.SelectedUser.fullProfile);
         };
 
-        var _buildAccessLevels = function(accessLevelDeclarations, userRoles){
-            var accessLevels = {};
-            for(var level in accessLevelDeclarations){
-
-                if(typeof accessLevelDeclarations[level] == 'string'){
-                    if(accessLevelDeclarations[level] == '*'){
-
-                        var resultBitMask = '';
-
-                        for( var role in userRoles){
-                            resultBitMask += "1"
-                        }
-                        //accessLevels[level] = parseInt(resultBitMask, 2);
-                        accessLevels[level] = {
-                            bitMask: parseInt(resultBitMask, 2)
-                        };
-                    }
-                    else
-                        console.log("Access Control Error: Could not parse '" + accessLevelDeclarations[level] + "' as access definition for level '" + level + "'")
-
-                }
-                else {
-
-                    var resultBitMask = 0;
-                    for(var role in accessLevelDeclarations[level]){
-                        if(userRoles.hasOwnProperty(accessLevelDeclarations[level][role]))
-                            resultBitMask = resultBitMask | userRoles[accessLevelDeclarations[level][role]].bitMask
-                        else console.log("Access Control Error: Could not find role '" + accessLevelDeclarations[level][role] + "' in registered roles while building access for '" + level + "'")
-                    }
-                    accessLevels[level] = {
-                        bitMask: resultBitMask
-                    };
+        var _authorize = function(accessLevel, role){
+            if(role === undefined) {
+                if(!CacheService.getItem(CacheService.Items.SelectedUser.fullProfile)){
+                    role = this.userRoles["public"];
+                } else {
+                    role = this.userRoles[CacheService.getItem(CacheService.Items.SelectedUser.fullProfile).role];
                 }
             }
-
-            return accessLevels;
+            return accessLevel.bitMask & role.bitMask;
         };
 
-        var _userRoles = function(){
-            $scope.model.buildRoles($scope.model.authorizationConfig.roles);
-        };
-
-        var _accessLevels = function(){
-            $scope.model.buildAccessLevels($scope.model.authorizationConfig.accessLevels, $scope.model.userRoles());
-        };
-
-        $scope.model = {
-            buildRoles: _buildRoles,
-            buildAccessLevels: _buildAccessLevels,
-            authorizationConfig: _authorizationConfig,
+        return {
             userRoles: _userRoles,
-            rolesList: _authorizationConfig.roles,
-            accessLevels: _accessLevels
+            accessLevels: _accessLevels,
+            login: _login,
+            isAuthenticated: _isAuthenticated,
+            authorize: _authorize
         }
     };
 
-    angular.module('alpine').factory('AuthenticationService', ['$http', '$scope', '$state', '$rootScope', 'Constants', AuthenticationService]);
+    ramAngularApp.module.factory('AuthenticationService', ['$http', '$state', '$rootScope', 'RestService', 'CacheService', 'Constants', AuthenticationService]);
 })();

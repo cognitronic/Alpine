@@ -4,20 +4,24 @@
 (function(){
     'use strict';
 
-    var LoginController = function($scope, AuthenticationService){
+    var LoginController = function($scope, AuthenticationService, Constants){
         var _credentials = {
             email: '',
             password: ''
         };
 
+        var _message = '';
+
         var _login = function(creds){
-          AuthenticationService.login(creds);
+            $scope.model.message = AuthenticationService.login(creds);
         };
 
         $scope.model = {
-
+            login: _login,
+            credentials: _credentials,
+            message: _message
         }
     };
 
-    angular.module('alpine').controller('LoginController', ['$scope', 'AuthenticationService', LoginController]);
+    ramAngularApp.module.controller('LoginController', ['$scope', 'AuthenticationService', 'Constants', LoginController]);
 })();

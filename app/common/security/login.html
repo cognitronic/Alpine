@@ -1,18 +1,19 @@
 <div class=" slim-view">
-    <form id="login-form" class="form-login clearfix well well-sm" autocomplete="off" ng-submit="login(user)">
+    <form id="login-form" class="form-login clearfix well well-sm" autocomplete="off" ng-submit="model.login(model.credentials)">
         <header class="img-logo center avatar">
-            <img class="img-circle" src="../../assets/img/logo.gif" />
+            <!--<img class="img-circle" src="../../assets/img/logo.gif" />-->
+            <h2>Grower Payments</h2>
         </header>
 
         <div class="login-message">
-            {{ loginmessage }}
+            {{ model.message }}
         </div>
 
         <div class="form-group">
-            <input name="email" class="form-control" type="email" placeholder="Email" ng-model="user.email" required autofocus>
+            <input name="email" class="form-control" type="email" placeholder="Email" ng-model="model.credentials.email" required autofocus>
         </div>
         <div class="form-group">
-            <input name="password" class="form-control" type="password" placeholder="Password" autocomplete="off" ng-model="user.password" required>
+            <input name="password" class="form-control" type="password" placeholder="Password" autocomplete="off" ng-model="model.credentials.password" required>
         </div>
         <button class="btn btn- btn-primary btn-block" type="submit">
             Sign in

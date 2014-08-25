@@ -8,5 +8,5 @@
 
     };
 
-    angular.module('alpine').controller('ProfileController', [ProfileController]);
+    ramAngularApp.module.controller('ProfileController', [ProfileController]);
 })();

@@ -9,5 +9,5 @@
 
     };
 
-    angular.module('alpine').controller('ScheduleController', [ScheduleController]);
+    ramAngularApp.module.controller('ScheduleController', [ScheduleController]);
 })();

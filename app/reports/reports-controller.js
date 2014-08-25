@@ -8,5 +8,5 @@
 
     };
 
-    angular.module('alpine').controller('ReportsController', [ReportsController]);
+    ramAngularApp.module.controller('ReportsController', [ReportsController]);
 })();

@@ -24,5 +24,5 @@
         }
     };
 
-    angular.module('alpine').directive('apLoader', apLoader);
+    ramAngularApp.module.directive('apLoader', apLoader);
 })();
