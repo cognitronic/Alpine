@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,11 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="domain\Assessment.cs" />
+    <Compile Include="domain\IAssessment.cs" />
+    <Compile Include="domain\IUser.cs" />
+    <Compile Include="domain\IUserRepository.cs" />
+    <Compile Include="domain\User.cs" />
+    <Compile Include="ICacheStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceStrings.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="domain\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

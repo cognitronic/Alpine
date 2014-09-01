@@ -1,1 +1,25 @@
-schedule
+<div class="container view-container">
+    <div class="row-fluid">
+        <div class="pull-right" style="margin-top: 10px;">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="cropYear" class="control-label col-md-5 messagecontainer"><b>Crop Year:</b></label>
+                    <div class="col-md-7">
+                        <select id="cropYear" class="form-control" ng-model="model.selectedCropYear" ng-change="model.reloadData()">
+                            <option value="">-- Select Year --</option>
+                            <option ng-repeat=" y in model.cropYears"
+                                    ng-selected="y == model.selectedCropYear">
+                                {{ y }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h3>Master Schedule</h3>
+        <div class="clearfix"/>
+        <hr />
+        <div ui-view="assessments"></div>
+    </div>
+</div>
+<div ui-view="payments"></div>

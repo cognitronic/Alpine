@@ -10,13 +10,16 @@
             SelectedUser: {
                 fullProfile: 'fullProfile'
             },
+            SelectedCropYear: 'selectedCropYear',
             Reports: {
                 growerReport: 'growerReport',
                 averyLabels: 'averyLabels'
             },
             Profile: {
-                selectedGrower: 'selectedGrower',
-                selectedCropYear: 'selectedCropYear'
+                selectedGrower: 'selectedGrower'
+            },
+            Alerts: {
+                alertsList: 'alertsList'
             }
         };
 

@@ -11,18 +11,15 @@
 
         var _login = function(creds){
 
-            var successCb = function(data){
-                data.then(function(user){
-                    if(user){
-                        CacheService.setItem(CacheService.Items.SelectedUser.fullProfile, user);
-                        $state.go('root.profile');
-                    } else {
-                        CacheService.removeItem(CacheService.Items.SelectedUser.fullProfile);
-                        return Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT;
-                        console.log('invalid login');
-                    }
-                });
-
+            var successCb = function(user){
+                if(user){
+                    CacheService.setItem(CacheService.Items.SelectedUser.fullProfile, user);
+                    $state.go('root.profile');
+                } else {
+                    CacheService.removeItem(CacheService.Items.SelectedUser.fullProfile);
+                    return Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT;
+                    console.log('invalid login');
+                }
             };
 
             RestService.postData(RestService.URLS.LOGIN_URL, creds, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT);

@@ -4,22 +4,115 @@
     <bookmark url="file://$PROJECT_DIR$/app/common/constants.js" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a60092-41a8-4f37-aa80-2af28582bd31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/alerts-service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/cache-service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/rest-service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/security/routing-access-config.js" />
+    <list default="true" id="43a60092-41a8-4f37-aa80-2af28582bd31" name="Default" comment="Created webApi server side rest project as well as core project">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/assessment-service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/assessments-controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/assessments.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/event-service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/payment-schedules-controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/payment-service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/payments.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/schedule-service.js" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.5.0.0\Microsoft.AspNet.WebApi.5.0.0.nupkg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.5.0.0\Microsoft.AspNet.WebApi.5.0.0.nuspec" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\Microsoft.AspNet.WebApi.Client.5.0.0.nupkg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\Microsoft.AspNet.WebApi.Client.5.0.0.nuspec" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\portable-wp8%2Bnetcore45%2Bnet45\System.Net.Http.Formatting.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\portable-wp8%2Bnetcore45%2Bnet45\System.Net.Http.Formatting.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\portable-wp8+netcore45+net45\System.Net.Http.Formatting.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\portable-wp8+netcore45+net45\System.Net.Http.Formatting.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\Microsoft.AspNet.WebApi.Core.5.0.0.nupkg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\Microsoft.AspNet.WebApi.Core.5.0.0.nuspec" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\content\web.config.transform" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\Newtonsoft.Json.5.0.6.nupkg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\Newtonsoft.Json.5.0.6.nuspec" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net20\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net20\Newtonsoft.Json.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net40%2Bsl4%2Bwp7%2Bwin8\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net40%2Bsl4%2Bwp7%2Bwin8\Newtonsoft.Json.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net45%2Bwp80%2Bwin8\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net45%2Bwp80%2Bwin8\Newtonsoft.Json.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/Newtonsoft.Json.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/Newtonsoft.Json.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Net.Http.Formatting.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Net.Http.Formatting.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Net.Http.Formatting.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Net.Http.Formatting.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.WebHost.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.WebHost.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Web.Http.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Web.Http.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.dll" afterPath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.dll" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.v12.suo" afterPath="$PROJECT_DIR$/alpine/alpine.v12.suo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/App.config" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/App.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/Newtonsoft.Json.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/Newtonsoft.Json.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/Controllers/ProfileController.cs" afterPath="$PROJECT_DIR$/alpine/alpine.api/Controllers/ProfileController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Net.Http.Formatting.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Net.Http.Formatting.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Net.Http.Formatting.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Net.Http.Formatting.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.WebHost.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.WebHost.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Web.Http.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Web.Http.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/Web.config" afterPath="$PROJECT_DIR$/alpine/alpine.api/Web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/App_Start/WebApiConfig.cs" afterPath="$PROJECT_DIR$/alpine/alpine.api/App_Start/WebApiConfig.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/alerts-service.js" afterPath="$PROJECT_DIR$/app/common/alerts-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csproj.FileListAbsolute.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/alpine.api.Tests.csproj" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/alpine.api.Tests.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll.config" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.csproj.FileListAbsolute.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/alpine.api.csproj" afterPath="$PROJECT_DIR$/alpine/alpine.api/alpine.api.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.dll.config" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.dll.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/alpine.core.csproj" afterPath="$PROJECT_DIR$/alpine/alpine.core/alpine.core.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.sln" afterPath="$PROJECT_DIR$/alpine/alpine.sln" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.js" afterPath="$PROJECT_DIR$/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/security/authentication-service.js" afterPath="$PROJECT_DIR$/app/common/security/authentication-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/app/assets/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/cache-service.js" afterPath="$PROJECT_DIR$/app/common/cache-service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/constants.js" afterPath="$PROJECT_DIR$/app/common/constants.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/layout/header.html" afterPath="$PROJECT_DIR$/app/common/layout/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/loader-directive.js" afterPath="$PROJECT_DIR$/app/common/loader-directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/security/login-controller.js" afterPath="$PROJECT_DIR$/app/common/security/login-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/security/login.html" afterPath="$PROJECT_DIR$/app/common/security/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/security/no-access-controller.js" afterPath="$PROJECT_DIR$/app/common/security/no-access-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/profile-controller.js" afterPath="$PROJECT_DIR$/app/profile/profile-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/reports/reports-controller.js" afterPath="$PROJECT_DIR$/app/reports/reports-controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/main.css" afterPath="$PROJECT_DIR$/app/assets/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/packages.config" afterPath="$PROJECT_DIR$/alpine/alpine.api/packages.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/packages.config" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/packages.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/packages/repositories.config" afterPath="$PROJECT_DIR$/alpine/packages/repositories.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/rest-service.js" afterPath="$PROJECT_DIR$/app/common/rest-service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/schedule/schedule-controller.js" afterPath="$PROJECT_DIR$/app/schedule/schedule-controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/schedule/schedule-index.html" afterPath="$PROJECT_DIR$/app/schedule/schedule-index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Alpine.iws" />
@@ -32,7 +125,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\Projects\Alpine" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -46,25 +139,55 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="52" selection-start="2401" selection-end="2401" vertical-scroll-proportion="-26.241379" vertical-offset="239" max-vertical-offset="1180">
+            <state line="44" column="57" selection-start="2048" selection-end="2048" vertical-scroll-proportion="-16.586206" vertical-offset="399" max-vertical-offset="1300">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cache-service.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/cache-service.js">
+      <file leaf-file-name="payment-schedules-controller.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/schedule/payment-schedules-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="26" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state line="10" column="138" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/app.js">
+      <file leaf-file-name="assessments-controller.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/schedule/assessments-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="47" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="2440">
+            <state line="18" column="10" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="750" column="16" selection-start="11914" selection-end="11914" vertical-scroll-proportion="-21.8" vertical-offset="14455" max-vertical-offset="116580">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payments.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/schedule/payments.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="23" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.2195122" vertical-offset="440" max-vertical-offset="2520">
+              <folding>
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedule-controller.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/schedule/schedule-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="109" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -72,68 +195,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authentication-service.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/security/authentication-service.js">
+      <file leaf-file-name="assessments.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/schedule/assessments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+            <state line="9" column="5" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="800">
               <folding>
-                <element signature="e#351#1079#0" expanded="false" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing-access-config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/security/routing-access-config.js">
+      <file leaf-file-name="schedule-index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/schedule/schedule-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="46" selection-start="3504" selection-end="3504" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rest-service.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/rest-service.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="9" selection-start="4920" selection-end="4920" vertical-scroll-proportion="-27.24" vertical-offset="2079" max-vertical-offset="2980">
+            <state line="16" column="19" selection-start="138" selection-end="916" vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="600">
               <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/common/security/login.html">
+      <file leaf-file-name="event-service.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/common/event-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="35" selection-start="372" selection-end="372" vertical-scroll-proportion="0.16646849" vertical-offset="0" max-vertical-offset="841">
+            <state line="16" column="54" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login-controller.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/security/login-controller.js">
+      <file leaf-file-name="schedule-service.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/schedule/schedule-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="6" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="alerts-service.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/alerts-service.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="46" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="1060">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constants.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/constants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+            <state line="9" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
               <folding />
             </state>
           </provider>
@@ -157,22 +254,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/common/security/no-access.html" />
-        <option value="$PROJECT_DIR$/app/common/security/no-access-controller.js" />
-        <option value="$PROJECT_DIR$/app/common/loader-directive.js" />
-        <option value="$PROJECT_DIR$/app/common/security/login-controller.js" />
-        <option value="$PROJECT_DIR$/app/profile/profile-controller.js" />
-        <option value="$PROJECT_DIR$/app/reports/reports-controller.js" />
-        <option value="$PROJECT_DIR$/app/schedule/schedule-controller.js" />
-        <option value="$PROJECT_DIR$/app/common/alerts-service.js" />
-        <option value="$PROJECT_DIR$/app/common/rest-service.js" />
         <option value="$PROJECT_DIR$/app/common/constants.js" />
+        <option value="$PROJECT_DIR$/app/schedule/schedule-service.js" />
+        <option value="$PROJECT_DIR$/app/common/rest-service.js" />
         <option value="$PROJECT_DIR$/app/common/cache-service.js" />
-        <option value="$PROJECT_DIR$/app/common/security/routing-access-config.js" />
-        <option value="$PROJECT_DIR$/app/common/security/authentication-service.js" />
         <option value="$PROJECT_DIR$/app/app.js" />
+        <option value="$PROJECT_DIR$/app/common/layout/header.html" />
+        <option value="$PROJECT_DIR$/app/schedule/payment-schedules-controller.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/common/security/login.html" />
+        <option value="$PROJECT_DIR$/app/common/assessment-service.js" />
+        <option value="$PROJECT_DIR$/app/schedule/schedule-index.html" />
+        <option value="$PROJECT_DIR$/app/schedule/assessments.html" />
+        <option value="$PROJECT_DIR$/app/common/event-service.js" />
+        <option value="$PROJECT_DIR$/app/schedule/assessments-controller.js" />
+        <option value="$PROJECT_DIR$/app/schedule/schedule-controller.js" />
+        <option value="$PROJECT_DIR$/app/assets/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/app/schedule/payments.html" />
       </list>
     </option>
   </component>
@@ -237,6 +334,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,7 +445,61 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alpine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,6 +519,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\Alpine\app\assets\css" />
+      <recent name="C:\Projects\Alpine\app\assets" />
       <recent name="C:\Projects\Alpine\app" />
     </key>
   </component>
@@ -413,13 +584,22 @@
       <created>1408902599448</created>
       <updated>1408902599448</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactored authentication service to handle roles more efficiently and abstracted rest calls into their own service">
+      <created>1408925119716</created>
+      <updated>1408925119716</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created webApi server side rest project as well as core project">
+      <created>1408925415993</created>
+      <updated>1408925415993</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -436,7 +616,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -450,133 +629,146 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="authentication services and controller, css, master page layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication services and controller, css, master page layout" />
+    <MESSAGE value="refactored authentication service to handle roles more efficiently and abstracted rest calls into their own service" />
+    <MESSAGE value="Created webApi server side rest project as well as core project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created webApi server side rest project as well as core project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/common/security/no-access.html">
+    <entry file="file://$PROJECT_DIR$/app/common/security/login-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="131" selection-end="131" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/security/no-access-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/loader-directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="24" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/profile-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/reports/reports-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/schedule/schedule-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+        <state line="23" column="6" selection-start="535" selection-end="535" vertical-scroll-proportion="0.4827586" vertical-offset="0" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/common/rest-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="9" selection-start="4920" selection-end="4920" vertical-scroll-proportion="-27.24" vertical-offset="2079" max-vertical-offset="2980">
+        <state line="101" column="48" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.0" vertical-offset="1523" max-vertical-offset="2700">
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="false" />
+            <element signature="e#3797#3856#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/alerts-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="1060">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/common/cache-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="26" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/security/routing-access-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="46" selection-start="3504" selection-end="3504" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/security/authentication-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding>
-            <element signature="e#351#1079#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/security/login-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+        <state line="13" column="22" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="47" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="2440">
+        <state line="111" column="31" selection-start="4112" selection-end="4112" vertical-scroll-proportion="0.0" vertical-offset="1145" max-vertical-offset="2180">
+          <folding>
+            <element signature="e#432#606#0" expanded="false" />
+            <element signature="e#2671#2943#0" expanded="false" />
+            <element signature="e#2982#3301#0" expanded="false" />
+            <element signature="e#4644#4958#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/layout/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="61" selection-start="954" selection-end="954" vertical-scroll-proportion="-11.724138" vertical-offset="0" max-vertical-offset="940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/schedule/payment-schedules-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="138" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="57" selection-start="2048" selection-end="2048" vertical-scroll-proportion="-16.586206" vertical-offset="399" max-vertical-offset="1300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/assessment-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="562" selection-end="562" vertical-scroll-proportion="0.40047115" vertical-offset="0" max-vertical-offset="849">
+          <folding>
+            <element signature="e#616#998#0" expanded="false" />
+            <element signature="e#1054#1405#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/schedule/schedule-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/event-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="54" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/schedule/schedule-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="109" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/schedule/assessments-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="52" selection-start="2401" selection-end="2401" vertical-scroll-proportion="-26.241379" vertical-offset="239" max-vertical-offset="1180">
+        <state line="18" column="10" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/security/login.html">
+    <entry file="file://$PROJECT_DIR$/app/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="372" selection-end="372" vertical-scroll-proportion="0.16646849" vertical-offset="0" max-vertical-offset="841">
+        <state line="750" column="16" selection-start="11914" selection-end="11914" vertical-scroll-proportion="-21.8" vertical-offset="14455" max-vertical-offset="116580">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/schedule/assessments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="5" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="800">
+          <folding>
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/schedule/schedule-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="19" selection-start="138" selection-end="916" vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="600">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/schedule/payments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="23" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.2195122" vertical-offset="440" max-vertical-offset="2520">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -30,3 +30,14 @@ c:\Projects\Alpine\alpine\alpine.api\bin\Antlr3.Runtime.pdb
 c:\Projects\Alpine\alpine\alpine.api\obj\Debug\alpine.api.csprojResolveAssemblyReference.cache
 c:\Projects\Alpine\alpine\alpine.api\obj\Debug\alpine.api.dll
 c:\Projects\Alpine\alpine\alpine.api\obj\Debug\alpine.api.pdb
+c:\Projects\Alpine\alpine\alpine.api\bin\alpine.core.dll
+c:\Projects\Alpine\alpine\alpine.api\bin\alpine.repository.mongo.dll
+c:\Projects\Alpine\alpine\alpine.api\bin\MongoDB.Bson.dll
+c:\Projects\Alpine\alpine\alpine.api\bin\MongoDB.Driver.dll
+c:\Projects\Alpine\alpine\alpine.api\bin\alpine.core.pdb
+c:\Projects\Alpine\alpine\alpine.api\bin\alpine.repository.mongo.pdb
+c:\Projects\Alpine\alpine\alpine.api\bin\MongoDB.Bson.xml
+c:\Projects\Alpine\alpine\alpine.api\bin\MongoDB.Driver.xml
+c:\Projects\Alpine\alpine\alpine.api\bin\System.Web.Cors.dll
+c:\Projects\Alpine\alpine\alpine.api\bin\System.Web.Http.Cors.dll
+c:\Projects\Alpine\alpine\alpine.api\bin\System.Web.Http.Cors.xml

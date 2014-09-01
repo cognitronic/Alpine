@@ -1,0 +1,35 @@
+<div class="pull-right">
+    <button class="btn" type="button"  cc-add-user cc-post-submit-action="model.addAssessment()">
+        <i class="glyphicon glyphicon-plus"></i> Add Assessment
+    </button>
+    <button class="btn btn-info" type="button"  ng-click="model.updateAssessments()">
+        <i class="glyphicon glyphicon-floppy-save"></i> Update Assessments
+    </button>
+</div>
+<h3>Assessments</h3>
+<div>
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr class="bg-primary">
+            <th>Name</th>
+            <th>Price Per In Shell Lb.</th>
+            <th style="text-align: right;">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="assessment in model.assessments">
+            <td>
+                <input class="form-control" text="{{ assessment.name }}" ng-model="assessment.name" />
+            </td>
+            <td>
+                <input class="form-control" text="{{ assessment.price }}" ng-model="assessment.price" />
+            </td>
+            <td style="text-align: right;">
+                <button ng-click="model.deleteAssessment(assessment)" class="btn btn-danger">
+                    <i class="glyphicon glyphicon-remove"></i> Delete
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

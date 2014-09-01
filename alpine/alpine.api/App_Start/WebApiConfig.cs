@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Newtonsoft.Json.Serialization;
+using System.Web.Http.Cors;
 
 namespace alpine.api
 {
@@ -10,6 +11,9 @@ namespace alpine.api
     {
         public static void Register(HttpConfiguration config)
         {
+            var cors = new EnableCorsAttribute("http://alpine.localhost", "*", "GET,POST,PUT,DELETE,OPTIONS");
+            config.EnableCors(cors);
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 

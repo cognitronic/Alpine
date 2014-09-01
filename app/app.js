@@ -38,9 +38,14 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap']);
                 return data;
             }
             return $.param(data);
-        }
+        };
+
         //sets the content type header globally for $http calls
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
         $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+        $httpProvider.defaults.headers['delete'] = {'Content-Type': 'application/json; charset=UTF-8'};
 
         $stateProvider
             .state('root', {
@@ -84,7 +89,7 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap']);
             })
             .state('root.profile', {
                 url: '/profile',
-                access: access.anon,
+                access: access.admin,
                 views: {
                     'main-container@': {
                         templateUrl: 'profile/profile-index.html',
@@ -93,12 +98,27 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap']);
                 }
             })
             .state('root.schedule', {
-                url: '/schedule',
-                access: access.anon,
+                url: '',
+                abstract: true,
+                access: access.admin,
                 views: {
                     'main-container@': {
                         templateUrl: 'schedule/schedule-index.html',
                         controller: 'ScheduleController'
+                    }
+                }
+            })
+            .state('root.schedule.details', {
+                url: '/schedule',
+                access: access.admin,
+                views: {
+                    'payments@root.schedule': {
+                        templateUrl: 'schedule/payments.html',
+                        controller: 'PaymentSchedulesController'
+                    },
+                    'assessments@root.schedule': {
+                        templateUrl: 'schedule/assessments.html',
+                        controller: 'AssessmentsController'
                     }
                 }
             })

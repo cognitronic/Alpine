@@ -29,3 +29,14 @@ c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\System.Web.WebPages.Razor.x
 c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\System.Web.Optimization.xml
 c:\Projects\Alpine\alpine\alpine.api.Tests\obj\Debug\alpine.api.Tests.dll
 c:\Projects\Alpine\alpine\alpine.api.Tests\obj\Debug\alpine.api.Tests.pdb
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\alpine.repository.mongo.dll
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\alpine.core.dll
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\MongoDB.Driver.dll
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\MongoDB.Bson.dll
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\alpine.repository.mongo.pdb
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\alpine.core.pdb
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\MongoDB.Driver.xml
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\MongoDB.Bson.xml
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\System.Web.Cors.dll
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\System.Web.Http.Cors.dll
+c:\Projects\Alpine\alpine\alpine.api.Tests\bin\Debug\System.Web.Http.Cors.xml

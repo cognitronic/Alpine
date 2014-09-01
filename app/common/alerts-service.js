@@ -6,15 +6,20 @@
     'use strict';
 
     var AlertsService = function(CacheService, Constants){
-        var _alerts = [];
         var _timeout = 10000;
 
         var _autoCloseAlert = function(index){
-              this.alerts.splice(index, 1)
+            CacheService.getItem(CacheService.Items.Alerts.alertsList).splice(index, 1)
+            if(CacheService.getItem(CacheService.Items.Alerts.alertsList).length == 0){
+                CacheService.removeItem(CacheService.Items.Alerts.alertsList);
+            }
         };
 
         var _closeAlert = function(index){
-            this.alerts.splice(index, 1);
+            CacheService.getItem(CacheService.Items.Alerts.alertsList).splice(index, 1);
+            if(CacheService.getItem(CacheService.Items.Alerts.alertsList).length == 0){
+                CacheService.removeItem(CacheService.Items.Alerts.alertsList);
+            }
         };
 
         var _addAlert = function(msg, msgType, persist){
@@ -23,21 +28,21 @@
                 msgType: msgType,
                 persist: persist
             };
-            if(CacheService.getItem(Constants.CACHE_ITEMS.ALERTS)){
-                CacheService.getItem(Constants.CACHE_ITEMS.ALERTS).push(_alert);
+            if(CacheService.getItem(CacheService.Items.Alerts.alertsList)){
+                CacheService.getItem(CacheService.Items.Alerts.alertsList).push(_alert);
             } else {
                 var newAlert = [];
                 newAlert.push(_alert);
-                CacheService.setItem(Constants.CACHE_ITEMS.ALERTS, newAlert);
+                CacheService.setItem(CacheService.Items.Alerts.alertsList, newAlert);
             }
         };
 
         var _getAlerts = function(){
-            return this.alerts;
+            return CacheService.getItem(CacheService.Items.Alerts.alertsList);
         };
 
         return {
-            alerts: _alerts,
+            alerts: CacheService.getItem(CacheService.Items.Alerts.alertsList),
             timeout: _timeout,
             autoCloseAlert: _autoCloseAlert,
             addAlert: _addAlert,

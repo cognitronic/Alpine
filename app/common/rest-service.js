@@ -8,18 +8,21 @@
 
     var RestService = function($http, $rootScope, $q, AlertsService, Constants){
 
+        var BASE_PUBLIC_URL = 'http://alpine.localhost/',
+            BASE_API_URL = 'http://api.alpine.localhost/api/';
+
         var _URLS = {
-            LOGIN_URL: this.BASE_PUBLIC_URL + 'login',
-            PROFILE_BY_ID_URL: this.BASE_API_URL + 'profile/{0}'
+            LOGIN_URL: BASE_API_URL + 'login',
+            PROFILE_BY_ID_URL: BASE_API_URL + 'profile/{0}',
+            ASSESSMENTS: BASE_API_URL + 'assessments',
+            GET_ASSESSMENT: BASE_API_URL + 'assessments/{0}'
         }
 
         var _getData = function(url, successCallback, errorCallback, errorMessage){
-            var deferred = $q.defer();
             $rootScope.loading = true;
             $http.get(url)
                 .success(function(data){
                     $rootScope.loading = false;
-                    deferred.resolve(data);
                     if(successCallback){
                         successCallback(data);
                     } else {
@@ -28,24 +31,20 @@
                 })
                 .error(function(data){
                     $rootScope.loading = false;
-                    deferred.reject();
                     if(errorCallback){
                         errorCallback(errorMessage);
                     } else {
                         this.processError(data, errorMessage);
                     }
                 });
-            return deferred.promise;
         };
 
         var _postData = function(url, data, successCallback, errorCallback, errorMessage){
-            var deferred = $q.defer();
             $rootScope.loading = true;
             console.log(data);
             $http.post(url, data)
                 .success(function(data){
                     $rootScope.loading = false;
-                    deferred.resolve(data);
                     if(successCallback){
                         successCallback(data);
                     } else {
@@ -54,24 +53,20 @@
                 })
                 .error(function(){
                     $rootScope.loading = false;
-                    deferred.reject();
                     if(errorCallback){
                         errorCallback(errorMessage);
                     } else {
-                        this.processError(data, errorMessage);
+                        _processError(data, errorMessage);
                     }
                 });
-            return deferred.promise;
         };
 
         var _putData = function(url, data, successCallback, errorCallback, errorMessage){
-            var deferred = $q.defer();
             $rootScope.loading = true;
             console.log(data);
-            $http.post(url, data)
+            $http.put(url, data)
                 .success(function(data){
                     $rootScope.loading = false;
-                    deferred.resolve(data);
                     if(successCallback){
                         successCallback(data);
                     } else {
@@ -80,24 +75,19 @@
                 })
                 .error(function(){
                     $rootScope.loading = false;
-                    deferred.reject();
                     if(errorCallback){
                         errorCallback(errorMessage);
                     } else {
                         this.processError(data, errorMessage);
                     }
                 });
-            return deferred.promise;
         };
 
-        var _deleteData = function(url, data, successCallback, errorCallback, errorMessage){
-            var deferred = $q.defer();
+        var _deleteData = function(url, successCallback, errorCallback, errorMessage){
             $rootScope.loading = true;
-            console.log(data);
-            $http.post(url, data)
+            $http.delete(url)
                 .success(function(data){
                     $rootScope.loading = false;
-                    deferred.resolve(data);
                     if(successCallback){
                         successCallback(data);
                     } else {
@@ -106,14 +96,12 @@
                 })
                 .error(function(){
                     $rootScope.loading = false;
-                    deferred.reject();
                     if(errorCallback){
                         errorCallback(errorMessage);
                     } else {
-                        this.processError(data, errorMessage);
+                        this.processError(null, errorMessage);
                     }
                 });
-            return deferred.promise;
         };
 
         var _defaultSuccessCallback = function(data){
@@ -122,7 +110,7 @@
 
         var _processError = function(data, errorMessage){
             if(errorMessage){
-                AlertsService.addAlert(errorMessage, Constants.ALERTS.ERROR_MESSAGE, true);
+                AlertsService.addAlert(errorMessage, Constants.ALERT_TYPE.ERROR, true);
             }
         };
 
@@ -133,9 +121,9 @@
             putData: _putData,
             deleteData: _deleteData,
             processError: _processError,
-            BASE_PUBLIC_URL: 'http://alpine.localhost/',
-            BASE_API_URL: 'http://api.alpine.localhost/',
-            URLS: _URLS
+            URLS: _URLS,
+            BASE_PUBLIC_URL: BASE_PUBLIC_URL,
+            BASE_API_URL: BASE_API_URL
         }
     };
 

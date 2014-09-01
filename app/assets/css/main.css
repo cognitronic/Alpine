@@ -209,6 +209,7 @@ h3{
 .slim-view {
 	max-width: 310px;
 	margin: 15px auto;
+    border-radius: 6px;
 }
 /* @end */
 
@@ -267,7 +268,7 @@ h3{
 	text-align: left;
     letter-spacing: -0.06em;
     -webkit-font-smoothing: antialiased;
-    color: #dc137a;
+    color: #333;
 }
 
 .jumbotron .messagecontainer  {
@@ -303,7 +304,7 @@ h3{
 
 
 .login, .form-login, .form-forgot {
-
+    background-color: #fefefe;
 }
 
 .drop-container {
