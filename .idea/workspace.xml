@@ -4,115 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/app/common/constants.js" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a60092-41a8-4f37-aa80-2af28582bd31" name="Default" comment="Created webApi server side rest project as well as core project">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/assessment-service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/assessments-controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/assessments.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/event-service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/payment-schedules-controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/payment-service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/payments.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/schedule/schedule-service.js" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.5.0.0\Microsoft.AspNet.WebApi.5.0.0.nupkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.5.0.0\Microsoft.AspNet.WebApi.5.0.0.nuspec" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\Microsoft.AspNet.WebApi.Client.5.0.0.nupkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\Microsoft.AspNet.WebApi.Client.5.0.0.nuspec" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\portable-wp8%2Bnetcore45%2Bnet45\System.Net.Http.Formatting.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\portable-wp8%2Bnetcore45%2Bnet45\System.Net.Http.Formatting.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\portable-wp8+netcore45+net45\System.Net.Http.Formatting.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\portable-wp8+netcore45+net45\System.Net.Http.Formatting.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\Microsoft.AspNet.WebApi.Core.5.0.0.nupkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\Microsoft.AspNet.WebApi.Core.5.0.0.nuspec" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\content\web.config.transform" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\Newtonsoft.Json.5.0.6.nupkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\Newtonsoft.Json.5.0.6.nuspec" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net20\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net20\Newtonsoft.Json.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net40%2Bsl4%2Bwp7%2Bwin8\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net40%2Bsl4%2Bwp7%2Bwin8\Newtonsoft.Json.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net45%2Bwp80%2Bwin8\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net45%2Bwp80%2Bwin8\Newtonsoft.Json.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Alpine\alpine\packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/Newtonsoft.Json.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/Newtonsoft.Json.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Net.Http.Formatting.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Net.Http.Formatting.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Net.Http.Formatting.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Net.Http.Formatting.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.WebHost.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.WebHost.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Web.Http.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Web.Http.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.dll" afterPath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.dll" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.v12.suo" afterPath="$PROJECT_DIR$/alpine/alpine.v12.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/App.config" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/App.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/Newtonsoft.Json.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/Newtonsoft.Json.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/Controllers/ProfileController.cs" afterPath="$PROJECT_DIR$/alpine/alpine.api/Controllers/ProfileController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Net.Http.Formatting.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Net.Http.Formatting.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Net.Http.Formatting.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Net.Http.Formatting.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.WebHost.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.WebHost.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Web.Http.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/System.Web.Http.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.xml" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/System.Web.Http.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/Web.config" afterPath="$PROJECT_DIR$/alpine/alpine.api/Web.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/App_Start/WebApiConfig.cs" afterPath="$PROJECT_DIR$/alpine/alpine.api/App_Start/WebApiConfig.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/alerts-service.js" afterPath="$PROJECT_DIR$/app/common/alerts-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/alpine.api.Tests.csproj" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/alpine.api.Tests.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll.config" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/alpine.api.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/alpine.api.csproj" afterPath="$PROJECT_DIR$/alpine/alpine.api/alpine.api.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.dll.config" afterPath="$PROJECT_DIR$/alpine/alpine.api/bin/alpine.api.dll.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/alpine.core.csproj" afterPath="$PROJECT_DIR$/alpine/alpine.core/alpine.core.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.sln" afterPath="$PROJECT_DIR$/alpine/alpine.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.js" afterPath="$PROJECT_DIR$/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/security/authentication-service.js" afterPath="$PROJECT_DIR$/app/common/security/authentication-service.js" />
+    <list default="true" id="43a60092-41a8-4f37-aa80-2af28582bd31" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/app/assets/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/cache-service.js" afterPath="$PROJECT_DIR$/app/common/cache-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/constants.js" afterPath="$PROJECT_DIR$/app/common/constants.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/layout/header.html" afterPath="$PROJECT_DIR$/app/common/layout/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/main.css" afterPath="$PROJECT_DIR$/app/assets/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/packages.config" afterPath="$PROJECT_DIR$/alpine/alpine.api/packages.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/packages.config" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/packages.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/packages/repositories.config" afterPath="$PROJECT_DIR$/alpine/packages/repositories.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/rest-service.js" afterPath="$PROJECT_DIR$/app/common/rest-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/schedule/schedule-controller.js" afterPath="$PROJECT_DIR$/app/schedule/schedule-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/schedule/schedule-index.html" afterPath="$PROJECT_DIR$/app/schedule/schedule-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/schedule/payments.html" afterPath="$PROJECT_DIR$/app/schedule/payments.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Alpine.iws" />
@@ -163,22 +57,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="bootstrap.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/css/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="750" column="16" selection-start="11914" selection-end="11914" vertical-scroll-proportion="-21.8" vertical-offset="14455" max-vertical-offset="116580">
+            <state line="4381" column="23" selection-start="92019" selection-end="92019" vertical-scroll-proportion="0.8409894" vertical-offset="87006" max-vertical-offset="116580">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payments.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="payments.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/schedule/payments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="23" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.2195122" vertical-offset="440" max-vertical-offset="2520">
+            <state line="226" column="18" selection-start="11833" selection-end="11833" vertical-scroll-proportion="-26.896551" vertical-offset="1600" max-vertical-offset="2560">
               <folding>
                 <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -268,8 +165,8 @@
         <option value="$PROJECT_DIR$/app/common/event-service.js" />
         <option value="$PROJECT_DIR$/app/schedule/assessments-controller.js" />
         <option value="$PROJECT_DIR$/app/schedule/schedule-controller.js" />
-        <option value="$PROJECT_DIR$/app/assets/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/app/schedule/payments.html" />
+        <option value="$PROJECT_DIR$/app/assets/css/bootstrap.css" />
       </list>
     </option>
   </component>
@@ -352,6 +249,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alpine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -592,7 +567,11 @@
       <created>1408925415993</created>
       <updated>1408925415993</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added rest support for auth, assessments, and profile.  created master schedule framework.  added event bus, cache service and refactored rest-service">
+      <created>1409530885525</created>
+      <updated>1409530885525</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -631,7 +610,8 @@
     <MESSAGE value="authentication services and controller, css, master page layout" />
     <MESSAGE value="refactored authentication service to handle roles more efficiently and abstracted rest calls into their own service" />
     <MESSAGE value="Created webApi server side rest project as well as core project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created webApi server side rest project as well as core project" />
+    <MESSAGE value="Added rest support for auth, assessments, and profile.  created master schedule framework.  added event bus, cache service and refactored rest-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rest support for auth, assessments, and profile.  created master schedule framework.  added event bus, cache service and refactored rest-service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -736,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="750" column="16" selection-start="11914" selection-end="11914" vertical-scroll-proportion="-21.8" vertical-offset="14455" max-vertical-offset="116580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/schedule/assessments.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="5" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="800">
@@ -764,11 +737,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/schedule/payments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.2195122" vertical-offset="440" max-vertical-offset="2520">
+        <state line="226" column="18" selection-start="11833" selection-end="11833" vertical-scroll-proportion="-26.896551" vertical-offset="1600" max-vertical-offset="2560">
           <folding>
             <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4381" column="23" selection-start="92019" selection-end="92019" vertical-scroll-proportion="0.8409894" vertical-offset="87006" max-vertical-offset="116580">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -116,6 +116,115 @@
                 </div>
                 <div class="clearfix"/>
             </div>
+
+            <div class="jumbotron">
+                <form class="form-horizontal form-inline" role="form">
+                    <div class="form-group">
+                        <label for="paymentType" class="control-label col-md-5 messagecontainer"><b>PaymentType:</b></label>
+                        <div class="col-md-7">
+                            <select id="paymentType" class="form-control" ng-model="model.selectedCropYear">
+                                <option value="">-- Select Type --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentDatesLabel" class="control-label col-md-5 messagecontainer"><b>Dates:</b></label>
+                        <div class="col-md-7">
+                            <input id="paymentDatesLabel" class="form-control" text="{{ model.paymentDatesLabel }}"/>
+                        </div>
+                    </div>
+                    <div class="form-group pull-right" style="margin-right: 0px;">
+                        <button class="btn btn-info" type="button"  ng-click="model.updateAssessments()">
+                            <i class="glyphicon glyphicon-floppy-save"></i> Update Payment Schedule
+                        </button>
+                    </div>
+                </form>
+                <hr/>
+                <div style="margin-top: 10px;">
+                    <div class="col-md-4 form-horizontal">
+                        <div class="form-group">
+                            <b class="col-md-12">Progress Payment #1</b>
+                        </div>
+                        <div class="form-group">
+                            <b class="col-md-12">Scheduled Date:</b>
+                            <div class="col-md-12">
+                                <input id="payment1Date2" class="form-control" text="{{ model.paymentDatesLabel }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <b>Chandler:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input id="chandler2" class="form-control" text="{{ model.chandler }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <b>Howard:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input id="howard2" class="form-control" text="{{ model.chandler }}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-horizontal">
+                        <div class="form-group">
+                            <b class="col-md-12">Progress Payment #1</b>
+                        </div>
+                        <div class="form-group">
+                            <b class="col-md-12">Scheduled Date:</b>
+                            <div class="col-md-12">
+                                <input id="payment1Date3" class="form-control" text="{{ model.paymentDatesLabel }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <b>Chandler:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input id="chandler3" class="form-control" text="{{ model.chandler }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <b>Howard:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input id="howard3" class="form-control" text="{{ model.chandler }}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-horizontal">
+                        <div class="form-group">
+                            <b class="col-md-12">Progress Payment #1</b>
+                        </div>
+                        <div class="form-group">
+                            <b class="col-md-12">Scheduled Date:</b>
+                            <div class="col-md-12">
+                                <input id="payment1Date" class="form-control" text="{{ model.paymentDatesLabel }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <b>Chandler:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input id="chandler" class="form-control" text="{{ model.chandler }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <b>Howard:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input id="howard" class="form-control" text="{{ model.chandler }}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"/>
+            </div>
         </div>
     </div>
 </div>
