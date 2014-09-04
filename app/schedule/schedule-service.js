@@ -5,7 +5,7 @@
 (function(){
     'use strict';
 
-    var ScheduleService = function($q, AssessmentService){
+    var ScheduleService = function($q, RestService, AssessmentService, Constants){
 
         var _getCropYears = function(){
             var deferred = $q.defer();
@@ -23,18 +23,23 @@
             return deferred.promise;
         }
 
-        var _addAssessment = function(){
-
-        };
+        var _getPaymentSchedules = function(cropYear){
+            var deferred = $q.defer();
+            var success = function(data){
+                deferred.resolve(data);
+            }
+            RestService.getData(RestService.URLS.GET_PAYMENT_SCHEDULES + cropYear, success, undefined, Constants.MESSAGES.ERROR.FAILED_LOAD_RECORD);
+            return deferred.promise;
+        }
 
         return {
             getCropYears: _getCropYears,
             getAssessments: AssessmentService.getAssessments,
             deleteAssessment: AssessmentService.deleteAssessment,
-            addAssessment: _addAssessment,
-            updateAssessments: AssessmentService.updateAssessments
+            updateAssessments: AssessmentService.updateAssessments,
+            getPaymentSchedules: _getPaymentSchedules
         }
     };
 
-    ramAngularApp.module.factory('ScheduleService', ['$q', 'AssessmentService', ScheduleService]);
+    ramAngularApp.module.factory('ScheduleService', ['$q', 'RestService', 'AssessmentService', 'Constants', ScheduleService]);
 })();

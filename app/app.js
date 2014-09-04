@@ -2,7 +2,7 @@
  * Created by Danny Schreiber on 8/23/14.
  */
 var ramAngularApp = ramAngularApp || {};
-ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap']);
+ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc.widgets.position', 'dialogs.service']);
 
     ramAngularApp.module.run(function($rootScope, $location, AuthenticationService, $state){
         $rootScope.$state = $state;

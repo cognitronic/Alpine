@@ -1,0 +1,84 @@
+<div class="modal-header dialog-header-confirm">
+    <button type="button" class="close" ng-click="$dismiss()">&times;</button>
+    <h4 class="modal-title">
+        <span class="glyphicon glyphicon-check"></span>
+        {{ model.header }}
+    </h4>
+</div>
+<div class="modal-body">
+    <div>{{ model.msg }}</div>
+    <form name="varietyForm">
+        <div class="row-fluid">
+            <div class="col-md-3">
+                <ng-form name="nameForm">
+                    <div class="control-group span6">
+                        <label class="control-label">* Name:</label>
+                        <div class="controls">
+                            <input  control-group="false" value="{{ model.name }}"  name="name" id="name" class="form-control" type="text" placeholder="Enter Variety Name" ng-model="model.name" isrequired="true" field-validate autofocus>
+                        </div>
+                    </div>
+                </ng-form>
+            </div>
+            <div class="col-md-3">
+                <ng-form name="priceForm">
+                    <div class="control-group">
+                        <label class="control-label">* Price:</label>
+                        <div class="controls">
+                            <input control-group="false" value="{{ model.price }}" name="price" id="price" class="form-control" type="text" placeholder="Enter Default Price" ng-model="model.price" isrequired="true" field-validate>
+                        </div>
+                    </div>
+                </ng-form>
+            </div>
+            <div class="col-md-3">
+                <ng-form name="nutwareIdForm">
+                    <div class="control-group">
+                        <label class="control-label">* Nutware Id:</label>
+                        <div class="controls">
+                            <input control-group="false" value="{{ model.nutwareId }}" name="nutwareId" id="nutwareId" class="form-control" type="text" placeholder="Enter Nutware Id" ng-model="model.nutwareId" isrequired="true" field-validate />
+                        </div>
+                    </div>
+                </ng-form>
+            </div>
+            <div class="col-md-3">
+                <button style="margin-top: 25px;" class="btn" ng-click="model.addVariety()" ng-disabled="varietyForm.$invalid"><i class="glyphicon glyphicon-plus"></i> Add Variety</button>
+            </div>
+        </div>
+    </form>
+    <div style="clear: both;"></div>
+    <hr />
+    <div class="row-fluid" style="height: 350px; overflow-y: auto;">
+        <table class="table table-hover table-striped">
+            <thead>
+            <tr class="bg-primary">
+                <th>Name</th>
+                <th>Price</th>
+                <th>Nutware Id</th>
+                <th style="text-align: right;">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="variety in model.varieties">
+                <td>
+                    <input class="form-control" text="{{ variety.name }}" ng-model="variety.name" />
+                </td>
+                <td>
+                    <input class="form-control" text="{{ variety.price }}" ng-model="variety.price" />
+                </td>
+                <td>
+                    <input class="form-control" text="{{ variety.nutwareId }}" ng-model="variety.nutwareId" />
+                </td>
+                <td style="text-align: right;">
+                    <button ng-click="model.deleteVariety(variety)" class="btn btn-danger">
+                        <i class="glyphicon glyphicon-remove"></i> Delete
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="model.saveVariety()" ng-disabled="varietyForm.$invalid"><i class="glyphicon glyphicon-save"></i> Save</button>
+    <button type="button" class="btn btn-warning" ng-click="$dismiss()"><i class="glyphicon glyphicon-ban-circle"></i> Cancel</button>
+    <!--<button class="btn btn-link" ng-click="returnToList()">Return To List</button>-->
+</div>
