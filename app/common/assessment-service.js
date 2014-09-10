@@ -39,10 +39,21 @@
             return deferred.promise;
         };
 
+        var _saveAssessment = function(assessment){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+
+            RestService.postData(RestService.URLS.ASSESSMENTS, assessment, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_SAVE_RECORD);
+            return deferred.promise;
+        };
+
         return {
             getAssessments: _getAssessments,
             deleteAssessment: _deleteAssessment,
-            updateAssessments: _updateAssessments
+            updateAssessments: _updateAssessments,
+            saveAssessment: _saveAssessment
         };
     };
 

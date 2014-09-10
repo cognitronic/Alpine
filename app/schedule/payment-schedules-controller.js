@@ -9,20 +9,54 @@
         var _progressPaymentOneDate = new Date();
         var __progressPaymentOneOpened = false;
         var _paymentSchedules = [];
+        var _datePickerButtons = ['progressPaymentDate_ScheduleOne_1',
+            'progressPaymentDate_ScheduleOne_2',
+            'progressPaymentDate_ScheduleOne_3',
+            'progressPaymentDate_ScheduleOne_4',
+            'progressPaymentDate_ScheduleTwo_1',
+            'progressPaymentDate_ScheduleTwo_2',
+            'progressPaymentDate_ScheduleTwo_3',
+            'progressPaymentDate_ScheduleTwo_4',
+            'progressPaymentDate_ScheduleThree_1',
+            'progressPaymentDate_ScheduleThree_2',
+            'progressPaymentDate_ScheduleThree_3',
+            'progressPaymentDate_ScheduleThree_4'
+        ];
+
+        var _paymentSchedule = {};
 
         var _init = function(){
             $scope.model.getPaymentSchedules();
         };
 
-        var _progressPaymentOneDisabledDates = function(date, mode){
-          return (mode === 'day' && (date.getDay() === 0 || date.getDay() === 6));
+        //Sets the directive's max variable to today if a date string is not passed in.
+        var _toggleMaxDate = function() {
+            $scope.model.maxDate = ( $scope.model.maxDate ) ? null : new Date();
         };
 
-        var _progressPaymentOneOpen = function($event){
+        //Sets the directive's min variable to today if a date string is not passed in
+        var _toggleMinDate = function() {
+            $scope.model.minDate = ( $scope.model.minDate ) ? null : new Date();
+        };
+
+        //Iterates through the datePickerButtons array above to see which picker was clicked, and makes sure
+        // only the current picker popup is set to true
+        var _toggleDatePickers = function(pickerButton){
+            for(var i = 0, len = $scope.model.datePickerButtons.length; i < len; i++){
+                if(pickerButton === $scope.model.datePickerButtons[i])
+                    $scope.model[pickerButton] = true;
+                else
+                    $scope[$scope.model.datePickerButtons[i].replace('Popup', 'Opened')] = false;
+            }
+        };
+
+        //Grabs the event object's id and passes that into the toggleDatePicker function
+        var _openDatePicker = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
 
-            $scope.model.progressPaymentOneOpened = true;
+            var target = ($event.currentTarget) ? $event.currentTarget: $event.srcElement;
+            $scope.model.toggleDatePickers(target.id);
         };
 
         var _getPaymentSchedules = function(){
@@ -31,55 +65,34 @@
             });
         }
 
+        var _updatePaymentSchedule = function(schedule){
+            console.log(schedule);
+            ScheduleService.updatePaymentSchedule(schedule.Id, schedule).then(function(data){
+               $scope.model.init();
+            });
+        }
+
         var cropYearChangeListener = EventService.sub('CropYearChanged',function(message){
             $scope.model.init();
         });
         $scope.$on('$destroy', cropYearChangeListener);
 
-        $scope.today = function() {
-            $scope.dt = new Date();
-        };
-        $scope.today();
 
-        $scope.clear = function () {
-            $scope.dt = null;
-        };
-
-        // Disable weekend selection
-        $scope.disabled = function(date, mode) {
-            return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-        };
-
-        $scope.toggleMin = function() {
-            $scope.minDate = $scope.minDate ? null : new Date();
-        };
-        $scope.toggleMin();
-
-        $scope.open = function($event) {
-            $event.preventDefault();
-            $event.stopPropagation();
-
-            $scope.opened = true;
-        };
-
-        $scope.dateOptions = {
-            formatYear: 'yy',
-            startingDay: 1
-        };
-
-        $scope.initDate = new Date('2016-15-20');
-        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-        $scope.format = $scope.formats[0];
 
 
         $scope.model = {
             init: _init,
             progressPaymentOneDate: _progressPaymentOneDate,
             progressPaymentOneOpened: __progressPaymentOneOpened,
-            progressPaymentOneDisabledDates: _progressPaymentOneDisabledDates,
-            progressPaymentOneOpen: _progressPaymentOneOpen,
             getPaymentSchedules: _getPaymentSchedules,
-            paymentSchedules: _paymentSchedules
+            paymentSchedules: _paymentSchedules,
+            openDatePicker: _openDatePicker,
+            toggleDatePickers: _toggleDatePickers,
+            toggleMinDate: _toggleMinDate,
+            toggleMaxDate: _toggleMaxDate,
+            datePickerButtons: _datePickerButtons,
+            updatePaymentSchedule: _updatePaymentSchedule,
+            paymentSchedule: _paymentSchedule
         };
 
         $scope.model.init();

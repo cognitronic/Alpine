@@ -1,5 +1,8 @@
 <div class="pull-right">
-    <button class="btn" type="button"  cc-add-user cc-post-submit-action="model.addAssessment()">
+    <button class="btn" type="button"
+            ram-modal-title="Add Assessment"
+            ram-custom-modal="schedule/assessments-modal.html"
+            ram-modal-controller="AssessmentsController">
         <i class="glyphicon glyphicon-plus"></i> Add Assessment
     </button>
     <button class="btn btn-info" type="button"  ng-click="model.updateAssessments()">

@@ -4,7 +4,13 @@
 (function(){
     'use strict';
     var AssessmentsController = function(EventService, $scope, ScheduleService, CacheService){
-        var _assessments = {};
+        var _assessments = [];
+        var _assessment = {
+            name: '',
+            price: 0,
+            cropYear: ''
+
+        }
 
         var _getAssessments = function(cropYear){
             ScheduleService.getAssessments(cropYear).then(function(data){
@@ -16,6 +22,20 @@
             for(var i = 0, l = $scope.model.assessments.length; i<l; i++){
                 ScheduleService.updateAssessments($scope.model.assessments[i]);
             }
+        };
+
+        var _saveAssessment = function(){
+            $scope.model.assessment.cropYear = CacheService.getItem(CacheService.Items.SelectedCropYear);
+            ScheduleService.saveAssessment($scope.model.assessment).then(function(data){
+                $scope.model.init();
+            });
+            $scope.$dismiss();
+        };
+
+        var _deleteAssessment = function(assessment){
+            ScheduleService.deleteAssessment(assessment).then(function(data){
+                $scope.model.init();
+            });
         };
 
         var _init = function(){
@@ -30,9 +50,11 @@
         $scope.model = {
             init: _init,
             assessments: _assessments,
+            assessment: _assessment,
             getAssessments: _getAssessments,
             updateAssessments: _updateAssessments,
-            deleteAssessment: ScheduleService.deleteAssessment
+            saveAssessment: _saveAssessment,
+            deleteAssessment: _deleteAssessment
         }
 
         $scope.model.init();

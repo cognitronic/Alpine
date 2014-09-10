@@ -53,6 +53,7 @@
     <Compile Include="domain\IUserRepository.cs" />
     <Compile Include="domain\IVariety.cs" />
     <Compile Include="domain\PaymentSchedule.cs" />
+    <Compile Include="domain\PaymentVariety.cs" />
     <Compile Include="domain\ProgressPayment.cs" />
     <Compile Include="domain\User.cs" />
     <Compile Include="domain\Variety.cs" />

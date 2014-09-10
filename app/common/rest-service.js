@@ -17,7 +17,8 @@
             ASSESSMENTS: BASE_API_URL + 'assessments',
             GET_ASSESSMENT: BASE_API_URL + 'assessments/{0}',
             GET_VARIETIES: BASE_API_URL + 'varieties',
-            GET_PAYMENT_SCHEDULES: BASE_API_URL + 'paymentschedules?cropyear='
+            GET_PAYMENT_SCHEDULES: BASE_API_URL + 'paymentschedules?cropyear=',
+            PUT_PAYMENT_SCHEDULES: BASE_API_URL + 'paymentschedules/'
         }
 
         var _getData = function(url, successCallback, errorCallback, errorMessage){

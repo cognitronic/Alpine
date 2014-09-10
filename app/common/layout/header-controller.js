@@ -5,9 +5,18 @@
 (function(){
     'use strict';
 
-    var HeaderController = function(){
+    var HeaderController = function($scope, AuthenticationService){
 
+        var _init = function(){
+
+        };
+
+        $scope.model = {
+            init: _init,
+            logOut: AuthenticationService.logOut,
+            isAuthenticated: AuthenticationService.isAuthenticated
+        };
     };
 
-    angular.module('alpine').controller('HeaderController', [HeaderController]);
+    angular.module('alpine').controller('HeaderController', ['$scope', 'AuthenticationService', HeaderController]);
 })();

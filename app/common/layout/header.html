@@ -31,10 +31,10 @@
             </ul>
             <ul class="nav navbar-nav pull-right">
                 <li>
-                    <a ng-show="!isAuthenticated" href="#login">Sign In</a>
+                    <a ng-show="!model.isAuthenticated" href="#login">Sign In</a>
                 </li>
                 <li>
-                    <a ng-show="isAuthenticated" ng-click="logout()">Sign Out</a>
+                    <a ng-show="model.isAuthenticated" ng-click="model.logout()">Sign Out</a>
                 </li>
             </ul>
         </div>

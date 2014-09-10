@@ -15,7 +15,7 @@
         });
     };
 
-    var apLoader = function(){
+    var restLoader = function(){
         return{
             restrict: 'E',
             link: link,
@@ -24,5 +24,5 @@
         }
     };
 
-    ramAngularApp.module.directive('apLoader', apLoader);
+    ramAngularApp.module.directive('restLoader', restLoader);
 })();

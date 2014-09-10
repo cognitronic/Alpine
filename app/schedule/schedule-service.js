@@ -27,17 +27,28 @@
             var deferred = $q.defer();
             var success = function(data){
                 deferred.resolve(data);
-            }
+            };
             RestService.getData(RestService.URLS.GET_PAYMENT_SCHEDULES + cropYear, success, undefined, Constants.MESSAGES.ERROR.FAILED_LOAD_RECORD);
             return deferred.promise;
-        }
+        };
+
+        var _updatePaymentSchedule = function(id, schedule){
+            var deferred = $q.defer();
+            var success = function(data){
+                deferred.resolve(data);
+            };
+            RestService.putData(RestService.URLS.PUT_PAYMENT_SCHEDULES + id, schedule, success, undefined, Constants.MESSAGES.ERROR.FAILED_SAVE_RECORD);
+            return deferred.promise;
+        };
 
         return {
             getCropYears: _getCropYears,
             getAssessments: AssessmentService.getAssessments,
             deleteAssessment: AssessmentService.deleteAssessment,
             updateAssessments: AssessmentService.updateAssessments,
-            getPaymentSchedules: _getPaymentSchedules
+            saveAssessment: AssessmentService.saveAssessment,
+            getPaymentSchedules: _getPaymentSchedules,
+            updatePaymentSchedule: _updatePaymentSchedule
         }
     };
 

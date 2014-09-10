@@ -14,23 +14,22 @@
         </div>
         <h3>Payment Schedules</h3>
         <hr />
-        <div ng-repeat="schedule in model.paymentSchedules">
+        <div ng-repeat="schedule in model.paymentSchedules track by $index">
             <div class="jumbotron">
-                <form class="form-horizontal form-inline" role="form">
-                    <div class="form-group" style="margin-left: 20px;">
-                        <h4>{{ schedule.name }}</h4>
-                    </div>
-                    <div class="form-group">
-                        <div style="margin-left: 40px;">
-                            <input placeholder="Enter scheduled dates" id="paymentDatesLabel" class="form-control" text="{{ schedule.scheduledDates }}"/>
-                        </div>
-                    </div>
-                    <div class="form-group pull-right" style="margin-right: 0px;">
-                        <button class="btn btn-info" type="button"  ng-click="schedule.updatePaymentSchedule(payment)">
+                <div class="col-md-4">
+                    <h4>{{ schedule.name }}</h4>
+                </div>
+                <div class="col-md-4">
+                    <input placeholder="Enter scheduled dates" id="paymentDatesLabel" class="form-control" ng-model="model.paymentSchedules[$index].scheduledDates" value="{{ schedule.scheduledDates }}"/>
+                </div>
+                <div class="col-md-4">
+                    <div class="pull-right" style="margin-right: 0px;">
+                        <button class="btn btn-info" type="button"  ng-click="model.updatePaymentSchedule(schedule)">
                             <i class="glyphicon glyphicon-floppy-save"></i> Update Payment Schedule
                         </button>
                     </div>
-                </form>
+                </div>
+                <div class="clearfix"/>
                 <hr/>
                 <div style="margin-top: 10px;" ng-repeat="payment in schedule.progressPayments | orderBy: payment.paymentType">
                     <div class="col-md-3 form-horizontal">
@@ -45,22 +44,28 @@
                                            class="form-control"
                                            cc-datepicker-popup="MM/dd/yyyy"
                                            ng-model="payment.paymentDate"
-                                           is-open="model.progressPaymentOneOpened"
+                                           is-open="model.progressPaymentDate_{{ schedule.title }}_{{ payment.paymentType }}"
+                                           id="scheduledDate_{{ $index }}"
                                            ng-required="true"
                                            close-text="Close" />
                                       <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" ng-click="model.progressPaymentOneOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        <button type="button"
+                                                id="progressPaymentDate_{{ schedule.title }}_{{ payment.paymentType }}"
+                                                class="btn btn-default"
+                                                ng-click="model.openDatePicker($event)">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
                                       </span>
                                 </p>
                             </div>
                         </div>
-                        <div ng-repeat="variety in payment.varieties">
-                            <div class="form-group">
+                        <div style="padding: 10px; border-radius: 5px; background-color: #f0f0f0;">
+                            <div  ng-repeat="variety in payment.varieties" class="form-group">
                                 <div class="col-md-7">
                                     <b>{{ variety.name }}:</b>
                                 </div>
                                 <div class="col-md-5">
-                                    <input class="form-control" value="{{ variety.price }}"/>
+                                    <input class="form-control" ng-model="variety.price" value="{{ variety.price }}"/>
                                 </div>
                             </div>
                         </div>

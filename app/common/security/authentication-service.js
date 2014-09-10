@@ -8,12 +8,14 @@
 
         var _accessLevels = ramRoutingAccessConfig.accessLevels;
         var _userRoles = ramRoutingAccessConfig.userRoles;
+        var _isAuthenticated = false;
 
         var _login = function(creds){
 
             var successCb = function(user){
                 if(user){
                     CacheService.setItem(CacheService.Items.SelectedUser.fullProfile, user);
+                    this.isAuthenticated = true;
                     $state.go('root.profile');
                 } else {
                     CacheService.removeItem(CacheService.Items.SelectedUser.fullProfile);
@@ -25,9 +27,6 @@
             RestService.postData(RestService.URLS.LOGIN_URL, creds, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT);
         };
 
-        var _isAuthenticated = function(){
-            return CacheService.getItem(CacheService.Items.SelectedUser.fullProfile);
-        };
 
         var _authorize = function(accessLevel, role){
             if(role === undefined) {
@@ -38,6 +37,12 @@
                 }
             }
             return accessLevel.bitMask & role.bitMask;
+        };
+
+        var _logout = function(){
+            CacheService.removeItem(CacheService.Items.SelectedUser.fullProfile);
+            //$rootScope.$broadcast('userLoggedOut', {user: null});
+            $state.go('root.login');
         };
 
         return {

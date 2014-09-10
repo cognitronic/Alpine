@@ -18,7 +18,7 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc
         };
 
         $rootScope.$on('$locationChangeStart', function(event, next, current){
-            if(!routeClean($location.url()) && !AuthenticationService.isAuthenticated()){
+            if(!routeClean($location.url()) && !AuthenticationService.isAuthenticated){
                 $state.go('root.login');
             }
         });
