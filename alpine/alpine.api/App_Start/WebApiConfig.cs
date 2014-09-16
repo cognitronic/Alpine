@@ -11,7 +11,7 @@ namespace alpine.api
     {
         public static void Register(HttpConfiguration config)
         {
-            var cors = new EnableCorsAttribute("http://alpine.localhost", "*", "GET,POST,PUT,DELETE,OPTIONS");
+            var cors = new EnableCorsAttribute("*", "*", "GET,POST,PUT,DELETE,OPTIONS");
             config.EnableCors(cors);
 
             // Web API routes

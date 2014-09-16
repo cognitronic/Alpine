@@ -4,34 +4,7 @@
 var ramAngularApp = ramAngularApp || {};
 ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc.widgets.position', 'dialogs.service']);
 
-    ramAngularApp.module.run(function($rootScope, $location, AuthenticationService, $state){
-        $rootScope.$state = $state;
-        $rootScope.isVisible = true;
-
-        var routesThatDontRequireAuth = ['/login'];
-
-        var routeClean = function(route){
-            return _.find(routesThatDontRequireAuth,
-                function(noAuthRoute){
-                    return (route == noAuthRoute);
-                });
-        };
-
-        $rootScope.$on('$locationChangeStart', function(event, next, current){
-            if(!routeClean($location.url()) && !AuthenticationService.isAuthenticated){
-                $state.go('root.login');
-            }
-        });
-
-        $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute){
-            if(!AuthenticationService.authorize(currRoute.access)){
-                $state.go('root.no-access');
-                console.log('unauthorized');
-            }
-        });
-
-    })
-    .config(function($httpProvider, $stateProvider, $urlRouterProvider){
+    ramAngularApp.module.config(function($httpProvider, $stateProvider, $urlRouterProvider){
             var access = ramRoutingAccessConfig.accessLevels;
         $httpProvider.defaults.transformRequest = function(data){
             if (data === undefined) {
@@ -63,7 +36,7 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc
                     }
                 },
                 resolve: {
-                    initResolve: function(){
+                    initResolve: function(AuthenticationService, $state){
 
                     }
                 }
@@ -95,6 +68,11 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc
                         templateUrl: 'profile/profile-index.html',
                         controller: 'ProfileController'
                     }
+                },
+                onEnter: function($state, AuthenticationService){
+                    if(!AuthenticationService.isAuthenticated()){
+                        $state.go('root.login');
+                    }
                 }
             })
             .state('root.schedule', {
@@ -105,6 +83,11 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc
                     'main-container@': {
                         templateUrl: 'schedule/schedule-index.html',
                         controller: 'ScheduleController'
+                    }
+                },
+                onEnter: function($state, AuthenticationService){
+                    if(!AuthenticationService.isAuthenticated()){
+                        $state.go('root.login');
                     }
                 }
             })
@@ -130,8 +113,40 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc
                         templateUrl: 'reports/reports-index.html',
                         controller: 'ReportsController'
                     }
+                },
+                onEnter: function($state, AuthenticationService){
+                    if(!AuthenticationService.isAuthenticated()){
+                        $state.go('root.login');
+                    }
                 }
             });
 
-        $urlRouterProvider.otherwise('/profile');
+        $urlRouterProvider.otherwise('/schedule');
+    })
+    .run(function($rootScope, $location, AuthenticationService, $state){
+        $rootScope.$state = $state;
+        $rootScope.isVisible = true;
+
+        var routesThatDontRequireAuth = ['/login'];
+
+        var routeClean = function(route){
+            return _.find(routesThatDontRequireAuth,
+                function(noAuthRoute){
+                    return (route == noAuthRoute);
+                });
+        };
+
+        $rootScope.$on('$locationChangeStart', function(event, next, current){
+            if(!routeClean($location.url()) && !AuthenticationService.isAuthenticated()){
+                $state.go('root.login');
+            }
+        });
+
+        $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute){
+            if(!AuthenticationService.authorize(currRoute.access)){
+                $state.go('root.no-access');
+                console.log('unauthorized');
+            }
+        });
+
     });
