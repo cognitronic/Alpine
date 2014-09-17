@@ -75,6 +75,32 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc
                     }
                 }
             })
+            .state('root.profile.details', {
+                url:'/:name',
+                access: access.admin,
+                views: {
+                    'notes@root.profile': {
+                        templateUrl: 'profile/notes.html',
+                        controller: 'ProfileNotesController'
+                    },
+                    'assessments@root.profile': {
+                        templateUrl: 'profile/assessments.html',
+                        controller: 'ProfileAssessmentsController'
+                    },
+                    'schedule@root.profile': {
+                        templateUrl: 'profile/schedule.html',
+                        controller: 'ProfileScheduleController'
+                    },
+                    'payment-history@root.profile': {
+                        templateUrl: 'profile/payment-history.html',
+                        controller: 'ProfilePaymentHistoryController'
+                    },
+                    'payees@root.profile': {
+                        templateUrl: 'profile/payees.html',
+                        controller: 'ProfilePayeesController'
+                    }
+                }
+            })
             .state('root.schedule', {
                 url: '',
                 abstract: true,

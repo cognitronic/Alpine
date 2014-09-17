@@ -41,3 +41,5 @@ c:\Projects\Alpine\alpine\alpine.api\bin\MongoDB.Driver.xml
 c:\Projects\Alpine\alpine\alpine.api\bin\System.Web.Cors.dll
 c:\Projects\Alpine\alpine\alpine.api\bin\System.Web.Http.Cors.dll
 c:\Projects\Alpine\alpine\alpine.api\bin\System.Web.Http.Cors.xml
+C:\Projects\Alpine\alpine\alpine.api\bin\alpine.repository.linq.dll
+C:\Projects\Alpine\alpine\alpine.api\bin\alpine.repository.linq.pdb

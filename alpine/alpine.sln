@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alpine.core", "alpine.core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alpine.repository.mongo", "alpine.repository.mongo\alpine.repository.mongo.csproj", "{CBC9B6B0-63FF-4508-8204-F5968C7B6FF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alpine.reporting", "alpine.reporting\alpine.reporting.csproj", "{7CDA0816-8469-4630-9E6B-5159424E95D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alpine.repository.linq", "alpine.repository.linq\alpine.repository.linq.csproj", "{6A28BC0B-B96D-4098-BB9A-146D967FEA7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{CBC9B6B0-63FF-4508-8204-F5968C7B6FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBC9B6B0-63FF-4508-8204-F5968C7B6FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBC9B6B0-63FF-4508-8204-F5968C7B6FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CDA0816-8469-4630-9E6B-5159424E95D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CDA0816-8469-4630-9E6B-5159424E95D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CDA0816-8469-4630-9E6B-5159424E95D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CDA0816-8469-4630-9E6B-5159424E95D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A28BC0B-B96D-4098-BB9A-146D967FEA7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A28BC0B-B96D-4098-BB9A-146D967FEA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A28BC0B-B96D-4098-BB9A-146D967FEA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A28BC0B-B96D-4098-BB9A-146D967FEA7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

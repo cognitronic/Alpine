@@ -1,0 +1,42 @@
+<div class="container view-container">
+    <div class="row-fluid">
+        <div class="pull-right">
+            <button class="btn" type="button"
+                    ram-modal-title="Add Note"
+                    ram-custom-modal="profile/note-modal.html"
+                    ram-modal-controller="ProfileNotesController">
+                <i class="glyphicon glyphicon-plus"></i> Add Note
+            </button>
+            <button class="btn btn-info" type="button"  ng-click="model.updateNotes()">
+                <i class="glyphicon glyphicon-floppy-save"></i> Update Notes
+            </button>
+        </div>
+        <h3>Notes</h3>
+        <div>
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr class="bg-primary">
+                    <th>Note</th>
+                    <th style="text-align: right;">Active?</th>
+                    <th style="text-align: right;">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="note in model.notes">
+                    <td>
+                        <textarea class="form-control" text="{{ note.message }}" ng-model="note.message" ></textarea>
+                    </td>
+                    <td style="text-align: right;">
+                        <input type="checkbox" checked="{{ note.isActive }}" ng-model="note.isActive" />
+                    </td>
+                    <td style="text-align: right;">
+                        <button ng-click="model.deleteNote(note)" class="btn btn-danger">
+                            <i class="glyphicon glyphicon-remove"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="modal-header dialog-header-confirm">
+    <button type="button" class="close" ng-click="$dismiss()">&times;</button>
+    <h4 class="modal-title">
+        <span class="glyphicon glyphicon-check"></span>
+        Add New Note
+    </h4>
+</div>
+<div class="modal-body">
+    <form name="noteForm">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <ng-form name="messageForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Note:</label>
+                        <div class="controls">
+                            <textarea class="col-md-12"  control-group="false" value="{{ model.message }}"  name="message" id="message" type="text" placeholder="Enter message" ng-model="model.message" isrequired="true" field-validate autofocus ></textarea>
+                        </div>
+                    </div>
+                </ng-form>
+            </div>
+        </div>
+    </form>
+    <div style="clear: both;"></div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="model.saveNote()" ng-disabled="noteForm.$invalid"><i class="glyphicon glyphicon-save"></i> Save</button>
+    <button type="button" class="btn btn-warning" ng-click="$dismiss()"><i class="glyphicon glyphicon-ban-circle"></i> Cancel</button>
+</div>

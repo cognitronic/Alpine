@@ -23,6 +23,7 @@
             }
         };
 
+        //todo: Need to check if val is a json object or not and handle accordingly
         var _setItem = function(key, val) {
             var setVal = JSON.stringify(val);
             sessionStorage.setItem(key, setVal);

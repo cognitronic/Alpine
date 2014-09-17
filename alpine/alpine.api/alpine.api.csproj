@@ -131,7 +131,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AssessmentController.cs" />
+    <Compile Include="Controllers\GrowerController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\PaymentScheduleController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\VarietyController.cs" />
@@ -176,6 +178,10 @@
     <ProjectReference Include="..\alpine.core\alpine.core.csproj">
       <Project>{763ac662-bd44-4d9f-9f7e-db2fe65a3546}</Project>
       <Name>alpine.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\alpine.repository.linq\alpine.repository.linq.csproj">
+      <Project>{6a28bc0b-b96d-4098-bb9a-146d967fea7b}</Project>
+      <Name>alpine.repository.linq</Name>
     </ProjectReference>
     <ProjectReference Include="..\alpine.repository.mongo\alpine.repository.mongo.csproj">
       <Project>{cbc9b6b0-63ff-4508-8204-f5968c7b6ff4}</Project>
