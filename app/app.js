@@ -4,7 +4,8 @@
 var ramAngularApp = ramAngularApp || {};
 ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc.widgets.position', 'dialogs.service']);
 
-    ramAngularApp.module.config(function($httpProvider, $stateProvider, $urlRouterProvider){
+    ramAngularApp.module.config(function($httpProvider, $stateProvider, $urlRouterProvider, DialogsServiceProvider){
+        DialogsServiceProvider.useCopy(false);
             var access = ramRoutingAccessConfig.accessLevels;
         $httpProvider.defaults.transformRequest = function(data){
             if (data === undefined) {

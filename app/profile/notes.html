@@ -4,6 +4,7 @@
             <button class="btn" type="button"
                     ram-modal-title="Add Note"
                     ram-custom-modal="profile/note-modal.html"
+                    ram-post-submit-action="model.loadNotes()"
                     ram-modal-controller="ProfileNotesController">
                 <i class="glyphicon glyphicon-plus"></i> Add Note
             </button>
@@ -17,14 +18,18 @@
                 <thead>
                 <tr class="bg-primary">
                     <th>Note</th>
+                    <th style="text-align: right;">Date Created</th>
                     <th style="text-align: right;">Active?</th>
                     <th style="text-align: right;">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="note in model.notes">
+                <tr ng-repeat="note in model.notes | orderBy: Id">
                     <td>
                         <textarea class="form-control" text="{{ note.message }}" ng-model="note.message" ></textarea>
+                    </td>
+                    <td style="text-align: right;">
+                        <span>{{ model.formatDate(note.dateCreated) }}</span>
                     </td>
                     <td style="text-align: right;">
                         <input type="checkbox" checked="{{ note.isActive }}" ng-model="note.isActive" />

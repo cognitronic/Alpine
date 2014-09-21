@@ -12,8 +12,8 @@
 
         }
 
-        var _getAssessments = function(cropYear){
-            ScheduleService.getAssessments(cropYear).then(function(data){
+        var _getAssessments = function(){
+            ScheduleService.getAssessments(CacheService.getItem(CacheService.Items.SelectedCropYear)).then(function(data){
                 $scope.model.assessments = data;
             });
         };
@@ -27,9 +27,9 @@
         var _saveAssessment = function(){
             $scope.model.assessment.cropYear = CacheService.getItem(CacheService.Items.SelectedCropYear);
             ScheduleService.saveAssessment($scope.model.assessment).then(function(data){
-                $scope.model.init();
+                $scope.$close();
+                $scope.model.assessments.push($scope.model.assessment);
             });
-            $scope.$dismiss();
         };
 
         var _deleteAssessment = function(assessment){
@@ -39,7 +39,7 @@
         };
 
         var _init = function(){
-            $scope.model.getAssessments(CacheService.getItem(CacheService.Items.SelectedCropYear));
+            $scope.model.getAssessments();
         };
 
         var cropYearChangeListener = EventService.sub('CropYearChanged',function(message){
