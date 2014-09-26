@@ -1,5 +1,82 @@
 <div class="container view-container">
     <div class="row-fluid">
+        <div class="pull-right">
+            <div class="btn-group" dropdown is-open="model.isOpen">
+                <button type="button" class="btn btn-primary dropdown-toggle" ng-click="model.toggleDropdown($event)" ng-disabled="model.disabled">
+                    {{ model.selectedSchedule.name }} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu drop-down-menu" role="menu">
+                    <li ng-repeat="schedule in model.paymentSchedules">
+                        <div ng-click="model.scheduleSelected(schedule)">
+                            <b>{{ schedule.name }}</b><br />
+                            <small>({{ schedule.scheduledDates }})</small>
+                            <br />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <h3>Payment Schedule</h3>
+        <hr />
+        <div ng-show="model.showSchedule">
+            <div class="jumbotron">
+                <div class="col-md-4">
+                    <h4>{{ model.selectedSchedule.name }}</h4>
+                </div>
+                <div class="col-md-4">
+                    <input placeholder="Enter scheduled dates" id="paymentDatesLabel" class="form-control" ng-model="model.selectedSchedule.scheduledDates" value="{{ model.selectedSchedule.scheduledDates }}"/>
+                </div>
+                <div class="col-md-4">
+                    <div class="pull-right" style="margin-right: 0px;">
+                        <button class="btn btn-info" type="button"  ng-click="model.updatePaymentSchedule(model.selectedSchedule)">
+                            <i class="glyphicon glyphicon-floppy-save"></i> Update Payment Schedule
+                        </button>
+                    </div>
+                </div>
+                <div class="clearfix"/>
+                <hr/>
+                <div style="margin-top: 10px;" ng-repeat="payment in model.selectedSchedule.progressPayments | orderBy: payment.paymentType">
+                    <div class="col-md-3 form-horizontal">
+                        <div class="form-group">
+                            <b class="col-md-12">{{ payment.name }}</b>
+                        </div>
+                        <div class="form-group">
+                            <b class="col-md-12">Scheduled Date:</b>
+                            <div class="col-md-12">
+                                <p class="input-group">
+                                    <input type="text"
+                                           class="form-control"
+                                           cc-datepicker-popup="MM/dd/yyyy"
+                                           ng-model="payment.paymentDate"
+                                           is-open="model.progressPaymentDate_{{ model.selectedSchedule.title }}_{{ payment.paymentType }}"
+                                           id="scheduledDate_{{ $index }}"
+                                           ng-required="true"
+                                           close-text="Close" />
+                                      <span class="input-group-btn">
+                                        <button type="button"
+                                                id="progressPaymentDate_{{ model.selectedSchedule.title }}_{{ payment.paymentType }}"
+                                                class="btn btn-default"
+                                                ng-click="model.openDatePicker($event)">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                      </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div style="padding: 10px; border-radius: 5px; background-color: #f0f0f0;">
+                            <div  ng-repeat="variety in payment.varieties" class="form-group">
+                                <div class="col-md-7">
+                                    <b>{{ variety.name }}:</b>
+                                </div>
+                                <div class="col-md-5">
+                                    <input class="form-control" ng-model="variety.price" value="{{ variety.price }}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"/>
+            </div>
+        </div>
     </div>
 </div>

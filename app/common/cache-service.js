@@ -16,7 +16,8 @@
                 averyLabels: 'averyLabels'
             },
             Profile: {
-                selectedGrower: 'selectedGrower'
+                selectedGrower: 'selectedGrower',
+                selectedSchedule: 'selectedSchedule'
             },
             Alerts: {
                 alertsList: 'alertsList'

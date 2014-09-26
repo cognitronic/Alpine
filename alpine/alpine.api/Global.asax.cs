@@ -6,13 +6,14 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+using MongoDB.Bson;
 namespace alpine.api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
+            ModelBinders.Binders.Add(typeof(ObjectId), new ObjectIdBinder());
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

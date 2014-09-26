@@ -30,6 +30,12 @@
             });
         };
 
+        var _updateNotes = function(){
+            for(var i = 0, l = $scope.model.notes.length; i < l; i++){
+                GrowerService.updateGrowerNotes($scope.model.notes[i]);
+            }
+        };
+
         var _loadNotes = function(){
             $scope.model.notes = [];
             GrowerService.getGrowerNotes(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id)

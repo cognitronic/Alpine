@@ -1,5 +1,40 @@
 <div class="container view-container">
     <div class="row-fluid">
+        <div class="pull-right">
+            <button class="btn" type="button"
+                    ram-modal-title="Add Assessment"
+                    ram-custom-modal="profile/assessments-modal.html"
+                    ram-post-submit-action="model.getAvailableAssessments()"
+                    ram-modal-controller="ProfileAssessmentsController">
+                <i class="glyphicon glyphicon-plus"></i> Add Assessment
+            </button>
+        </div>
         <h3>Assessments</h3>
+        <div>
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr class="bg-primary">
+                    <th>Name</th>
+                    <th>Price Per In Shell Lb.</th>
+                    <th style="text-align: right;">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="assessment in model.assessments">
+                    <td>
+                        {{ assessment.name }}
+                    </td>
+                    <td>
+                        {{ assessment.price }}
+                    </td>
+                    <td style="text-align: right;">
+                        <button ng-click="model.deleteAssessment(assessment)" class="btn btn-danger">
+                            <i class="glyphicon glyphicon-remove"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

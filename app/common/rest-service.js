@@ -20,10 +20,8 @@
             GET_PAYMENT_SCHEDULES: BASE_API_URL + 'paymentschedules?cropyear=',
             PUT_PAYMENT_SCHEDULES: BASE_API_URL + 'paymentschedules/',
             GET_GROWERS: BASE_API_URL + 'growers/',
-            GET_GROWER_NOTES: BASE_API_URL + 'notes/',
-            POST_GROWER_NOTE: BASE_API_URL + 'notes/',
-            PUT_GROWER_NOTES: BASE_API_URL + 'notes/',
-            DELETE_GROWER_NOTE: BASE_API_URL + 'notes/'
+            GROWER_NOTES: BASE_API_URL + 'notes/',
+            GET_GROWER_ASSESSMENTS: BASE_API_URL + 'grower-assessments/'
         }
 
         var _getData = function(url, successCallback, errorCallback, errorMessage){

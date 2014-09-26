@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="domain\Assessment.cs" />
     <Compile Include="domain\Grower.cs" />
+    <Compile Include="domain\GrowerAssessment.cs" />
     <Compile Include="domain\IAssessment.cs" />
     <Compile Include="domain\IPaymentSchedule.cs" />
     <Compile Include="domain\IUser.cs" />
