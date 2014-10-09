@@ -15,7 +15,7 @@
         };
 
         var _getAssessments = function(){
-            GrowerService.getGrowerAssessments(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id).then(function(data){
+            GrowerService.getGrowerAssessments(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id, CacheService.getItem(CacheService.Items.SelectedCropYear)).then(function(data){
                $scope.model.assessments = data;
             });
         };

@@ -1,0 +1,116 @@
+<div class="modal-header dialog-header-confirm">
+    <button type="button" class="close" ng-click="$dismiss()">&times;</button>
+    <h4 class="modal-title">
+        <span class="glyphicon glyphicon-check"></span>
+        Manage Payee
+    </h4>
+</div>
+<div class="modal-body">
+    <form name="payeeForm">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <ng-form name="firstNameForm">
+                    <div class="control-group span6">
+                        <label class="control-label">First Name:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.firstName }}"  name="firstName" id="firstName" type="text" placeholder="Enter first name" ng-model="model.payee.firstName" isrequired="true" field-validate autofocus />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="lastNameForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Last Name:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.lastName }}"  name="lastName" id="lastName" type="text" placeholder="Enter last name" ng-model="model.payee.lastName" isrequired="true" field-validate  />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="checkMadeToForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Check Made To:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.checkMadeTo }}"  name="checkMadeTo" id="checkMadeTo" type="text" placeholder="Enter name on check" ng-model="model.payee.checkMadeTo" isrequired="true" field-validate autofocus />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="addressForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Address:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.address }}"  name="address" id="address" type="text" placeholder="Enter address" ng-model="model.payee.address" isrequired="true" field-validate  />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="cityForm">
+                    <div class="control-group span6">
+                        <label class="control-label">City:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.city }}"  name="city" id="city" type="text" placeholder="Enter city" ng-model="model.payee.city" isrequired="true" field-validate  />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="stateForm">
+                    <div class="control-group span6">
+                        <label class="control-label">State:</label>
+                        <div class="controls">
+                            <input class="form-control" style="width: 50px;"  control-group="false" value="{{ model.payee.state }}"  name="state" id="state" type="text" placeholder="CA" ng-model="model.payee.state" isrequired="true" field-validate  />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="zipForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Zip:</label>
+                        <div class="controls">
+                            <input class="form-control" style="width: 125px;"  control-group="false" value="{{ model.payee.zip }}"  name="zip" id="zip" type="text" placeholder="Enter zip" ng-model="model.payee.zip" isrequired="true" field-validate autofocus />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="emailForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Email:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.email }}"  name="email" id="email" type="text" placeholder="Enter email" ng-model="model.payee.email" isrequired="true" field-validate/>
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="faxForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Fax:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.fax }}"  name="fax" id="fax" type="text" placeholder="Enter fax" ng-model="model.payee.fax" />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="workPhoneForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Work Phone:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.workPhone }}"  name="workPhone" id="workPhone" type="text" placeholder="Enter work phone" ng-model="model.payee.workPhone" />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="cellPhoneForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Cell Phone:</label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.cellPhone }}"  name="cellPhone" id="cellPhone" type="text" placeholder="Enter cell phone" ng-model="model.payee.cellPhone" />
+                        </div>
+                    </div>
+                </ng-form>
+                <ng-form name="splitPercentForm">
+                    <div class="control-group span6">
+                        <label class="control-label">Split Percent:<small>( Integer only ie: 50 )</small></label>
+                        <div class="controls">
+                            <input class="form-control"  control-group="false" value="{{ model.payee.splitPercent }}"  name="splitPercent" id="splitPercent" type="text" style="width: 50px;" ng-model="model.payee.splitPercent" />
+                        </div>
+                    </div>
+                </ng-form>
+            </div>
+        </div>
+    </form>
+    <div style="clear: both;"></div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="model.saveNote()" ng-disabled="noteForm.$invalid"><i class="glyphicon glyphicon-save"></i> Save</button>
+    <button type="button" class="btn btn-warning" ng-click="$dismiss()"><i class="glyphicon glyphicon-ban-circle"></i> Cancel</button>
+</div>

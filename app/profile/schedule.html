@@ -1,6 +1,6 @@
 <div class="container view-container">
     <div class="row-fluid">
-        <div class="pull-right">
+        <div ng-hide="model.scheduleAssigned" class="pull-right">
             <div class="btn-group" dropdown is-open="model.isOpen">
                 <button type="button" class="btn btn-primary dropdown-toggle" ng-click="model.toggleDropdown($event)" ng-disabled="model.disabled">
                     {{ model.selectedSchedule.name }} <span class="caret"></span>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="pull-right" style="margin-right: 0px;">
-                        <button class="btn btn-info" type="button"  ng-click="model.updatePaymentSchedule(model.selectedSchedule)">
+                        <button class="btn btn-info" type="button"  ng-click="model.updateGrowerPaymentSchedule(model.selectedSchedule)">
                             <i class="glyphicon glyphicon-floppy-save"></i> Update Payment Schedule
                         </button>
                     </div>

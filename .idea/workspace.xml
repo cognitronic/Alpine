@@ -4,10 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/app/common/constants.js" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a60092-41a8-4f37-aa80-2af28582bd31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/profile/assessments-modal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/profile/payment-transaction-modal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
+    <list default="true" id="43a60092-41a8-4f37-aa80-2af28582bd31" name="Default" comment="hooked up assessments and profile notes.  started on grower schedule and payment history">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/profile/payee-modal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.csprojResolveAssemblyReference.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/bin/Debug/alpine.api.Tests.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.dll" afterPath="$PROJECT_DIR$/alpine/alpine.api.Tests/obj/Debug/alpine.api.Tests.dll" />
@@ -25,21 +23,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.core/bin/Debug/alpine.core.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.pdb" afterPath="$PROJECT_DIR$/alpine/alpine.core/obj/Debug/alpine.core.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.v12.suo" afterPath="$PROJECT_DIR$/alpine/alpine.v12.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/Global.asax.cs" afterPath="$PROJECT_DIR$/alpine/alpine.api/Global.asax.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/alpine.api.csproj" afterPath="$PROJECT_DIR$/alpine/alpine.api/alpine.api.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.core/alpine.core.csproj" afterPath="$PROJECT_DIR$/alpine/alpine.core/alpine.core.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/assessments.html" afterPath="$PROJECT_DIR$/app/profile/assessments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/cache-service.js" afterPath="$PROJECT_DIR$/app/common/cache-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/custom-modal-directive.js" afterPath="$PROJECT_DIR$/app/common/custom-modal-directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/grower-service.js" afterPath="$PROJECT_DIR$/app/common/grower-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/main.css" afterPath="$PROJECT_DIR$/app/assets/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/note-modal.html" afterPath="$PROJECT_DIR$/app/profile/note-modal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alpine/alpine.api/packages.config" afterPath="$PROJECT_DIR$/alpine/alpine.api/packages.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/payment-history.html" afterPath="$PROJECT_DIR$/app/profile/payment-history.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/payees.html" afterPath="$PROJECT_DIR$/app/profile/payees.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/profile-assessments-controller.js" afterPath="$PROJECT_DIR$/app/profile/profile-assessments-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/profile-notes-controller.js" afterPath="$PROJECT_DIR$/app/profile/profile-notes-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/profile-payment-history-controller.js" afterPath="$PROJECT_DIR$/app/profile/profile-payment-history-controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/profile-controller.js" afterPath="$PROJECT_DIR$/app/profile/profile-controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/profile-index.html" afterPath="$PROJECT_DIR$/app/profile/profile-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/profile-payees-controller.js" afterPath="$PROJECT_DIR$/app/profile/profile-payees-controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/profile-schedule-controller.js" afterPath="$PROJECT_DIR$/app/profile/profile-schedule-controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/rest-service.js" afterPath="$PROJECT_DIR$/app/common/rest-service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/schedule.html" afterPath="$PROJECT_DIR$/app/profile/schedule.html" />
@@ -69,32 +61,51 @@
       <file leaf-file-name="schedule.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/profile/schedule.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="40" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-2.7931035" vertical-offset="319" max-vertical-offset="1760">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="30" column="111" selection-start="1704" selection-end="1704" vertical-scroll-proportion="-10.344828" vertical-offset="300" max-vertical-offset="1760">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assessments.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/profile/assessments.html">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="1568" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="900">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="17244" max-vertical-offset="18100">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile-payees-controller.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/profile/profile-payees-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="108" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
               <folding>
-                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile-schedule-controller.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="profile-schedule-controller.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/profile/profile-schedule-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="39" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1220">
+            <state line="80" column="57" selection-start="3583" selection-end="3583" vertical-scroll-proportion="0.51834863" vertical-offset="1168" max-vertical-offset="2860">
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+                <element signature="e#3757#3849#0" expanded="false" />
+                <element signature="e#3979#4071#0" expanded="false" />
+                <element signature="e#4294#4651#0" expanded="false" />
+                <element signature="e#4790#5023#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payment-schedules-controller.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/schedule/payment-schedules-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="10" selection-start="350" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -102,10 +113,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cache-service.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/cache-service.js">
+      <file leaf-file-name="profile-controller.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/profile/profile-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="51" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1160">
+            <state line="34" column="63" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="33" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="3680">
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -113,49 +133,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payment-history.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/profile/payment-history.html">
+      <file leaf-file-name="grower-service.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/common/grower-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1180">
-              <folding>
-                <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="108" column="49" selection-start="4406" selection-end="4406" vertical-scroll-proportion="0.0" vertical-offset="2008" max-vertical-offset="3000">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payment-transaction-modal.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/profile/payment-transaction-modal.html">
+      <file leaf-file-name="rest-service.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/common/rest-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="71" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.118906066" vertical-offset="420" max-vertical-offset="1600">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile-payment-history-controller.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/profile/profile-payment-history-controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="610" max-vertical-offset="1540">
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constants.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/constants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
+            <state line="25" column="12" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2840">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,22 +169,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/common/dialogs-service.js" />
-        <option value="$PROJECT_DIR$/app/common/dialogs-controller.js" />
-        <option value="$PROJECT_DIR$/app/common/custom-modal-directive.js" />
-        <option value="$PROJECT_DIR$/app/vendor/angular-strap/dist/angular-strap.js" />
-        <option value="$PROJECT_DIR$/app/app.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/profile/profile-assessments-controller.js" />
-        <option value="$PROJECT_DIR$/app/assets/css/main.css" />
         <option value="$PROJECT_DIR$/app/common/cache-service.js" />
         <option value="$PROJECT_DIR$/app/profile/payment-history.html" />
-        <option value="$PROJECT_DIR$/app/profile/profile-index.html" />
-        <option value="$PROJECT_DIR$/app/profile/note-modal.html" />
         <option value="$PROJECT_DIR$/app/profile/profile-payment-history-controller.js" />
-        <option value="$PROJECT_DIR$/app/profile/schedule.html" />
-        <option value="$PROJECT_DIR$/app/profile/profile-schedule-controller.js" />
         <option value="$PROJECT_DIR$/app/profile/payment-transaction-modal.html" />
+        <option value="$PROJECT_DIR$/app/common/custom-modal-directive.js" />
+        <option value="$PROJECT_DIR$/app/profile/payees.html" />
+        <option value="$PROJECT_DIR$/app/profile/note-modal.html" />
+        <option value="$PROJECT_DIR$/app/profile/payee-modal.html" />
+        <option value="$PROJECT_DIR$/app/profile/profile-payees-controller.js" />
+        <option value="$PROJECT_DIR$/app/profile/profile-assessments-controller.js" />
+        <option value="$PROJECT_DIR$/app/profile/profile-index.html" />
+        <option value="$PROJECT_DIR$/app/profile/schedule.html" />
+        <option value="$PROJECT_DIR$/app/profile/profile-controller.js" />
+        <option value="$PROJECT_DIR$/app/common/rest-service.js" />
+        <option value="$PROJECT_DIR$/app/common/grower-service.js" />
+        <option value="$PROJECT_DIR$/app/profile/profile-schedule-controller.js" />
       </list>
     </option>
   </component>
@@ -275,72 +266,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alpine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alpine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-strap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alpine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alpine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-strap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alpine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alpine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="schedule" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -377,29 +302,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alpine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alpine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,11 +315,11 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="appearance" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PSP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -427,14 +330,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -443,6 +338,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -522,14 +425,17 @@
       <created>1411310244798</created>
       <updated>1411310244798</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="hooked up assessments and profile notes.  started on grower schedule and payment history">
+      <created>1411763845706</created>
+      <updated>1411763845706</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -546,6 +452,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -568,7 +475,8 @@
     <MESSAGE value="added authentication service and login/out controls" />
     <MESSAGE value="started on grower profile.  created growers domain objects, service api, repository, and hooked up the client-side event service to the growers ddl" />
     <MESSAGE value="hooked up notes creation and display in grower profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="hooked up notes creation and display in grower profile" />
+    <MESSAGE value="hooked up assessments and profile notes.  started on grower schedule and payment history" />
+    <option name="LAST_COMMIT_MESSAGE" value="hooked up assessments and profile notes.  started on grower schedule and payment history" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -576,109 +484,73 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/profile/payee-modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="168" selection-start="6807" selection-end="6807" vertical-scroll-proportion="0.0" vertical-offset="2060" max-vertical-offset="2420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/profile/payees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="14" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="887" column="22" selection-start="12902" selection-end="12902" vertical-scroll-proportion="0.81609195" vertical-offset="17030" max-vertical-offset="18100">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="18100">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/schedule/payments.html">
+    <entry file="file://$PROJECT_DIR$/app/common/utility-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="14" selection-start="745" selection-end="4334" vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="480">
+        <state line="36" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="0.49541286" vertical-offset="288" max-vertical-offset="1160">
           <folding>
-            <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/constants.js">
+    <entry file="file://$PROJECT_DIR$/app/profile/profile-notes-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+        <state line="67" column="55" selection-start="1987" selection-end="2177" vertical-scroll-proportion="0.72855467" vertical-offset="720" max-vertical-offset="1600">
           <folding>
-            <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/assessments-modal.html">
+    <entry file="file://$PROJECT_DIR$/app/profile/profile-assessments-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1700" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/cache-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="51" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1160">
+        <state line="17" column="113" selection-start="584" selection-end="643" vertical-scroll-proportion="0.3760282" vertical-offset="20" max-vertical-offset="1460">
           <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/assessments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1568" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="900">
-          <folding>
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/profile/profile-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
+        <state line="10" column="32" selection-start="587" selection-end="587" vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="980">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.js">
+    <entry file="file://$PROJECT_DIR$/app/schedule/schedule-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="60" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3680">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
           <folding>
             <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/note-modal.html">
+    <entry file="file://$PROJECT_DIR$/app/profile/profile-payees-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="58" selection-start="642" selection-end="642" vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="820">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/notes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/schedule/payment-schedules-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.21201414" vertical-offset="180" max-vertical-offset="2160">
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/payment-history.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1180">
-          <folding>
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/profile-payment-history-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="610" max-vertical-offset="1540">
+        <state line="16" column="108" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
@@ -687,31 +559,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/profile/schedule.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-2.7931035" vertical-offset="319" max-vertical-offset="1760">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="30" column="111" selection-start="1704" selection-end="1704" vertical-scroll-proportion="-10.344828" vertical-offset="300" max-vertical-offset="1760">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/profile-schedule-controller.js">
+    <entry file="file://$PROJECT_DIR$/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="39" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1220">
+        <state line="13" column="33" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="3680">
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/profile/payment-transaction-modal.html">
+    <entry file="file://$PROJECT_DIR$/app/schedule/payment-schedules-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="71" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.118906066" vertical-offset="420" max-vertical-offset="1600">
+        <state line="23" column="10" selection-start="350" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/profile/profile-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="63" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/rest-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="12" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/grower-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="49" selection-start="4406" selection-end="4406" vertical-scroll-proportion="0.0" vertical-offset="2008" max-vertical-offset="3000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/profile/profile-schedule-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="57" selection-start="3583" selection-end="3583" vertical-scroll-proportion="0.51834863" vertical-offset="1168" max-vertical-offset="2860">
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#3757#3849#0" expanded="false" />
+            <element signature="e#3979#4071#0" expanded="false" />
+            <element signature="e#4294#4651#0" expanded="false" />
+            <element signature="e#4790#5023#0" expanded="false" />
           </folding>
         </state>
       </provider>

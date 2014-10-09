@@ -53,13 +53,13 @@
             return deferred.promise;
         };
 
-        var _getGrowerAssessments = function(assessmentId){
+        var _getGrowerAssessments = function(assessmentId, cropYear){
             var deferred = $q.defer();
             var successCb = function(data){
                 deferred.resolve(data);
             };
 
-            RestService.getData(RestService.URLS.GET_GROWER_ASSESSMENTS + assessmentId, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOAD_RECORD);
+            RestService.getData(RestService.URLS.GET_GROWER_ASSESSMENTS + assessmentId + '/' + cropYear, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOAD_RECORD);
             return deferred.promise;
         };
 
@@ -90,6 +90,35 @@
             return deferred.promise;
         };
 
+        var _getGrowerPayees = function(growerId){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+
+            RestService.getData(RestService.URLS.GET_GROWER_PAYEES + growerId, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOAD_RECORD);
+            return deferred.promise;
+        };
+
+        var _getGrowerSchedule = function(growerId, cropYear){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+
+            RestService.getData(RestService.URLS.GROWER_SCHEDULE + growerId + '/' + cropYear, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOAD_RECORD);
+            return deferred.promise;
+        };
+
+        var _updateGrowerSchedule = function(schedule){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+            RestService.putData(RestService.URLS.GROWER_SCHEDULE + '/' + schedule.Id, schedule, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_SAVE_RECORD);
+            return deferred.promise;
+        };
+
         return {
             getGrowers: _getGrowers,
             getGrowerNotes: _getGrowerNotes,
@@ -99,7 +128,10 @@
             getGrowerAssessments: _getGrowerAssessments,
             deleteAssessment: _deleteAssessment,
             updateGrowerAssessment: _updateGrowerAssessment,
-            deleteGrowerAssessment: _deleteGrowerAssessment
+            deleteGrowerAssessment: _deleteGrowerAssessment,
+            getGrowerPayees: _getGrowerPayees,
+            getGrowerSchedule: _getGrowerSchedule,
+            updateGrowerSchedule: _updateGrowerSchedule
         }
     };
 

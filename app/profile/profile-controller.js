@@ -18,16 +18,28 @@
         var _loadGrowers = function(){
             GrowerService.getGrowers().then(function(data){
                 $scope.model.growers = data;
-                $scope.model.selectedGrower = $scope.model.growers[0];
-                CacheService.setItem(CacheService.Items.Profile.selectedGrower, $scope.model.selectedGrower);
+                if(CacheService.getItem(CacheService.Items.Profile.selectedGrower)){
+                    var lookup = {};
+                    for (var i = 0, len = $scope.model.growers.length; i < len; i++) {
+                        lookup[$scope.model.growers[i].name] = $scope.model.growers[i];
+                    }
+                    $scope.model.selectedGrower = lookup[CacheService.getItem(CacheService.Items.Profile.selectedGrower).name];
+                } else {
+                    $scope.model.selectedGrower = $scope.model.growers[0];
+                    CacheService.setItem(CacheService.Items.Profile.selectedGrower, $scope.model.selectedGrower);
+                }
             });
         };
 
         var _loadCropYears = function(){
             ScheduleService.getCropYears().then(function(data){
                 $scope.model.cropYears = data;
-                $scope.model.selectedCropYear = $scope.model.cropYears[1];
-                CacheService.setItem(CacheService.Items.SelectedCropYear, $scope.model.selectedCropYear);
+                if(CacheService.getItem(CacheService.Items.SelectedCropYear)){
+                    $scope.model.selectedCropYear = CacheService.getItem(CacheService.Items.SelectedCropYear);
+                } else {
+                    $scope.model.selectedCropYear = $scope.model.cropYears[1];
+                    CacheService.setItem(CacheService.Items.SelectedCropYear, $scope.model.selectedCropYear);
+                }
             });
         };
 

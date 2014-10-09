@@ -14,7 +14,6 @@
           header:   title
         };
         element.bind('click', function(event){
-            console.log('hello');
            if(scope.ramOnLoadModalAction)
                 scope.$eval(scope.ramOnLoadModalAction);
             var dialog = dialogProvider.create(templateFile, controller, scope.dialogModel);

@@ -21,7 +21,9 @@
             PUT_PAYMENT_SCHEDULES: BASE_API_URL + 'paymentschedules/',
             GET_GROWERS: BASE_API_URL + 'growers/',
             GROWER_NOTES: BASE_API_URL + 'notes/',
-            GET_GROWER_ASSESSMENTS: BASE_API_URL + 'grower-assessments/'
+            GET_GROWER_ASSESSMENTS: BASE_API_URL + 'grower-assessments/',
+            GET_GROWER_PAYEES: BASE_API_URL + 'payees/',
+            GROWER_SCHEDULE: BASE_API_URL + 'profile/schedule/'
         }
 
         var _getData = function(url, successCallback, errorCallback, errorMessage){
@@ -32,7 +34,7 @@
                     if(successCallback){
                         successCallback(data);
                     } else {
-                        this.defaultSuccessCallback(data)
+                        _defaultSuccessCallback(data)
                     }
                 })
                 .error(function(data){
@@ -40,7 +42,7 @@
                     if(errorCallback){
                         errorCallback(errorMessage);
                     } else {
-                        this.processError(data, errorMessage);
+                        _processError(data, errorMessage);
                     }
                 });
         };
@@ -54,7 +56,7 @@
                     if(successCallback){
                         successCallback(data);
                     } else {
-                        this.defaultSuccessCallback(data)
+                        _defaultSuccessCallback(data)
                     }
                 })
                 .error(function(){
@@ -76,7 +78,7 @@
                     if(successCallback){
                         successCallback(data);
                     } else {
-                        this.defaultSuccessCallback(data)
+                        _defaultSuccessCallback(data)
                     }
                 })
                 .error(function(){
@@ -84,7 +86,7 @@
                     if(errorCallback){
                         errorCallback(errorMessage);
                     } else {
-                        this.processError(data, errorMessage);
+                        _processError(data, errorMessage);
                     }
                 });
         };
@@ -97,7 +99,7 @@
                     if(successCallback){
                         successCallback(data);
                     } else {
-                        this.defaultSuccessCallback(data)
+                        _defaultSuccessCallback(data)
                     }
                 })
                 .error(function(){
@@ -105,7 +107,7 @@
                     if(errorCallback){
                         errorCallback(errorMessage);
                     } else {
-                        this.processError(null, errorMessage);
+                        _processError(null, errorMessage);
                     }
                 });
         };

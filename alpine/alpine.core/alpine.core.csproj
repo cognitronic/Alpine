@@ -49,12 +49,15 @@
     <Compile Include="domain\Assessment.cs" />
     <Compile Include="domain\Grower.cs" />
     <Compile Include="domain\GrowerAssessment.cs" />
+    <Compile Include="domain\GrowerPayment.cs" />
+    <Compile Include="domain\GrowerSchedule.cs" />
     <Compile Include="domain\IAssessment.cs" />
     <Compile Include="domain\IPaymentSchedule.cs" />
     <Compile Include="domain\IUser.cs" />
     <Compile Include="domain\IUserRepository.cs" />
     <Compile Include="domain\IVariety.cs" />
     <Compile Include="domain\Note.cs" />
+    <Compile Include="domain\Payee.cs" />
     <Compile Include="domain\PaymentSchedule.cs" />
     <Compile Include="domain\PaymentVariety.cs" />
     <Compile Include="domain\ProgressPayment.cs" />

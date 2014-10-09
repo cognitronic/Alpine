@@ -5,14 +5,17 @@
                 <div class="form-group">
                     <label for="cropYear" class="control-label col-md-3 messagecontainer"><b>Crop Year:</b></label>
                     <div class="col-md-3">
-                        <select id="cropYear" class="form-control" ng-model="model.selectedCropYear" ng-change="model.reloadData()">
+                        <select id="cropYear"
+                                class="form-control"
+                                ng-model="model.selectedCropYear"
+                                ng-change="model.reloadData()">
                             <option ng-repeat=" y in model.cropYears"
                                     ng-selected="y == model.selectedCropYear">
                                 {{ y }}
                             </option>
                         </select>
                     </div>
-                    <label for="cropYear" class="control-label col-md-2 messagecontainer"><b>Growers:</b></label>
+                    <label for="growers" class="control-label col-md-2 messagecontainer"><b>Growers:</b></label>
                     <div class="col-md-4">
                         <select id="growers"
                                 class="form-control"
