@@ -119,6 +119,28 @@
             return deferred.promise;
         };
 
+        var _saveGrowerPayment = function(payment){
+          var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+            if(payment.Id == undefined){
+                payment.Id = '-1';
+            }
+            RestService.postData(RestService.URLS.GROWER_PAYMENT + payment.Id, payment, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_SAVE_RECORD);
+            return deferred.promise;
+        };
+
+        var _getGrowerPayments = function(growerId, cropYear){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+
+            RestService.getData(RestService.URLS.GROWER_PAYMENT + growerId + '/' + cropYear, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOAD_RECORD);
+            return deferred.promise;
+        };
+
         return {
             getGrowers: _getGrowers,
             getGrowerNotes: _getGrowerNotes,
@@ -131,7 +153,9 @@
             deleteGrowerAssessment: _deleteGrowerAssessment,
             getGrowerPayees: _getGrowerPayees,
             getGrowerSchedule: _getGrowerSchedule,
-            updateGrowerSchedule: _updateGrowerSchedule
+            updateGrowerSchedule: _updateGrowerSchedule,
+            saveGrowerPayment: _saveGrowerPayment,
+            getGrowerPayments: _getGrowerPayments
         }
     };
 

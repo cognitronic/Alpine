@@ -11,9 +11,11 @@
         var controller = attrs.ramModalController;
         var title = attrs.ramModalTitle || 'Alpine Pacific';
         scope.dialogModel = {
-          header:   title
+            header:   title
         };
         element.bind('click', function(event){
+            if(scope.ramEditable)
+                scope.dialogModel.editingModel = scope.$eval(scope.ramEditable);
            if(scope.ramOnLoadModalAction)
                 scope.$eval(scope.ramOnLoadModalAction);
             var dialog = dialogProvider.create(templateFile, controller, scope.dialogModel);
@@ -36,7 +38,8 @@
             scope: {
                 ramPostSubmitAction: '&',
                 ramPostCancelAction: '&',
-                ramOnLoadModalAction: '&'
+                ramOnLoadModalAction: '&',
+                ramEditable: '@'
             }
         }
     };

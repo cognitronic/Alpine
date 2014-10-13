@@ -94,7 +94,7 @@ ramAngularApp.module = angular.module('alpine', ['ui.router', 'ui.bootstrap','cc
                     },
                     'payment-history@root.profile': {
                         templateUrl: 'profile/payment-history.html',
-                        controller: 'ProfilePaymentHistoryController'
+                        controller: 'ProfilePaymentController'
                     },
                     'payees@root.profile': {
                         templateUrl: 'profile/payees.html',

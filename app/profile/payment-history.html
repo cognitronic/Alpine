@@ -22,15 +22,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="payment in model.payments">
+                <tr ng-repeat="payment in model.growerPayments">
                     <td>
-                        {{ payment.name }}
+                        {{ payment.paymentTypeName }}
                     </td>
                     <td>
-                        {{ payment.amount }}
+                        {{ payment.amount | currency }}
                     </td>
                     <td>
-                        {{ payment.transactionDate }}
+                        {{ payment.transactionDate | date: 'MM/dd/yyyy' }}
                     </td>
                     <td>
                         {{ payment.note }}
@@ -39,7 +39,13 @@
                         <button ng-click="model.viewPaymentReport(payment)" class="btn btn-primary">
                             <i class="glyphicon glyphicon-list-alt"></i> View Report
                         </button>
-                        <button ng-click="model.editPayment(payment)" class="btn btn-info">
+                        <button
+                                ram-modal-title="Edit Payment"
+                                ram-editable="{{payment}}"
+                                ram-custom-modal="profile/payment-transaction-modal.html"
+                                ram-post-submit-action="model.loadPayments()"
+                                ram-modal-controller="ProfilePaymentHistoryController"
+                                class="btn btn-info">
                             <i class="glyphicon glyphicon-pencil"></i> Edit
                         </button>
                         <button ng-click="model.deletePayment(payment)" class="btn btn-danger">

@@ -13,7 +13,9 @@
         var _message = '';
 
         var _login = function(creds){
-            $scope.model.message = AuthenticationService.login(creds);
+            AuthenticationService.login(creds).then(function(data){
+                $scope.model.message = data;
+            });
         };
 
         $scope.model = {

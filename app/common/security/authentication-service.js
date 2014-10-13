@@ -4,25 +4,27 @@
 
 (function(){
     'use strict';
-    var AuthenticationService = function($http, $state, $rootScope, RestService, CacheService, Constants){
+    var AuthenticationService = function($http, $q, $state, $rootScope, RestService, CacheService, Constants){
 
         var _accessLevels = ramRoutingAccessConfig.accessLevels;
         var _userRoles = ramRoutingAccessConfig.userRoles;
 
         var _login = function(creds){
-
+            var deferred = $q.defer();
             var successCb = function(user){
-                if(user){
+                if(user != 'null' && user != null){
                     CacheService.setItem(CacheService.Items.SelectedUser.fullProfile, user);
                     $state.go('root.schedule.details');
+                    deferred.resolve(user);
                 } else {
                     CacheService.removeItem(CacheService.Items.SelectedUser.fullProfile);
-                    return Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT;
+                    deferred.resolve(Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT);
                     console.log('invalid login');
                 }
             };
 
             RestService.postData(RestService.URLS.LOGIN_URL, creds, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_LOGIN_ATTEMPT);
+            return deferred.promise;
         };
 
 
@@ -59,5 +61,5 @@
         }
     };
 
-    ramAngularApp.module.factory('AuthenticationService', ['$http', '$state', '$rootScope', 'RestService', 'CacheService', 'Constants', AuthenticationService]);
+    ramAngularApp.module.factory('AuthenticationService', ['$http', '$q', '$state', '$rootScope', 'RestService', 'CacheService', 'Constants', AuthenticationService]);
 })();
