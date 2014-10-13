@@ -22,9 +22,10 @@
             GET_GROWERS: BASE_API_URL + 'growers/',
             GROWER_NOTES: BASE_API_URL + 'notes/',
             GET_GROWER_ASSESSMENTS: BASE_API_URL + 'grower-assessments/',
-            GET_GROWER_PAYEES: BASE_API_URL + 'payees/',
+            GET_GROWER_PAYEES: BASE_API_URL + 'profile/payees/',
             GROWER_SCHEDULE: BASE_API_URL + 'profile/schedule/',
-            GROWER_PAYMENT: BASE_API_URL + 'profile/payment/'
+            GROWER_PAYMENT: BASE_API_URL + 'profile/payment/',
+            GROWER_PAYEES: BASE_API_URL + 'profile/payees/'
         }
 
         var _getData = function(url, successCallback, errorCallback, errorMessage){

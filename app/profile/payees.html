@@ -15,20 +15,86 @@
         <h3>Payees</h3>
         <hr />
         <div>
-            <div style="margin-top: 10px; padding: 10px;" ng-repeat="payee in model.payees">
-                <div class="col-md-3 form-horizontal">
+            <div class="col-md-3 form-horizontal" style="margin-top: 10px; padding: 10px;" ng-repeat="payee in model.payees">
+                <div style="padding: 10px; border-radius: 5px; background-color: #f0f0f0;">
                     <div class="form-group">
-                        <div>
+                        <div class="col-md-12">
                             <b>First Name:</b>
                             <div>
-                                <input class="form-control" ng-model="model.firstname" value="{{ model.firstname }}"/>
+                                <input class="form-control" ng-model="payee.firstName" value="{{ payee.firstName }}"/>
                             </div>
                         </div>
-                        <div>
+                        <div class="col-md-12">
                             <b>Last Name:</b>
                             <div>
-                                <input class="form-control" ng-model="model.lastname" value="{{ model.lastname }}"/>
+                                <input class="form-control" ng-model="payee.lastName" value="{{ payee.lastName }}"/>
                             </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Check Made To:</b>
+                            <div>
+                                <input class="form-control" ng-model="payee.checkMadeTo" value="{{ payee.checkMadeTo }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Address:</b>
+                            <div>
+                                <input class="form-control" ng-model="payee.address" value="{{ payee.address }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>City:</b>
+                            <div>
+                                <input class="form-control" ng-model="payee.city" value="{{ payee.city }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>State:</b>
+                            <div>
+                                <input style="width: 75px;" class="form-control" ng-model="payee.state" value="{{ payee.state }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Zip:</b>
+                            <div>
+                                <input style="width: 100px;" class="form-control" ng-model="payee.zip" value="{{ payee.zip }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Email:</b>
+                            <div>
+                                <input class="form-control" type="email" ng-model="payee.email" value="{{ payee.email }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Fax:</b>
+                            <div>
+                                <input class="form-control" ng-model="payee.fax" value="{{ payee.fax }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Work Phone:</b>
+                            <div>
+                                <input class="form-control" ng-model="payee.workPhone" value="{{ payee.workPhone }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Cell Phone:</b>
+                            <div>
+                                <input class="form-control" ng-model="payee.cellPhone" value="{{ payee.cellPhone }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Split Percent:</b>
+                            <div>
+                                <input style="width: 50px;" class="form-control" ng-model="payee.splitPercent" value="{{ payee.splitPercent }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <hr/>
+                            <button class="btn btn-danger" ng-click="model.deletePayee(payee)">
+                                <i class="glyphicon glyphicon-remove"></i> Delete
+                            </button>
                         </div>
                     </div>
                 </div>

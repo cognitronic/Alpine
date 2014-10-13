@@ -5,18 +5,22 @@
 (function(){
     'use strict';
     var EventService = function($rootScope){
-
-        var _pub = function(name, data){
-            console.log('pub: ' + name + ' data: ' + data);
-            $rootScope.$emit(name, data);
+        var _destroyScope = function(scope, unsubscribe){
+            scope.$on('$destroy', unsubscribe);
         };
 
-        var _sub = function(name, handler){
+        var _pub = function(name, message){
+            console.log('pub: ' + name + ' message: ' + message);
+            $rootScope.$emit(name, message);
+        };
+
+        var _sub = function(scope, name, handler){
             console.log('sub: ' + name + ' handler: ' + handler);
-            $rootScope.$on(name, function(event, message){
+            var unsubscribe = $rootScope.$on(name, function(event, message){
                 console.log('sub: ' + name + ' message: ' + message);
                handler(message);
             });
+            _destroyScope(scope, unsubscribe);
         };
 
         return {

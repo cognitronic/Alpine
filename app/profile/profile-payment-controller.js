@@ -5,7 +5,7 @@
 (function(){
     'use strict';
 
-    var ProfilePaymentController = function($scope, CacheService, GrowerService){
+    var ProfilePaymentController = function($scope, CacheService, GrowerService, EventService){
 
         var _growerPayments = [];
         var _selectedGrowerPayment = {};
@@ -16,6 +16,12 @@
             });
         };
 
+        var _deletePayment = function(payment){
+            GrowerService.deleteGrowerPayment(payment).then(function(data){
+                $scope.model.loadPayments();
+            });
+        };
+
         var _init = function(){
             $scope.model.loadPayments();
         };
@@ -23,10 +29,18 @@
             init: _init,
             growerPayments: _growerPayments,
             selectedGrowerPayment: _selectedGrowerPayment,
-            loadPayments: _loadPayments
+            loadPayments: _loadPayments,
+            deletePayment: _deletePayment
         };
         $scope.model.init();
+
+        EventService.sub($scope, 'PaymentTransaction', function(message){
+            $scope.model.loadPayments();
+        });
+        EventService.sub($scope, 'SelectedProfileChanged',function(message){
+            $scope.model.init();
+        });
     };
 
-    ramAngularApp.module.controller('ProfilePaymentController', ['$scope', 'CacheService', 'GrowerService', ProfilePaymentController]);
+    ramAngularApp.module.controller('ProfilePaymentController', ['$scope', 'CacheService', 'GrowerService', 'EventService', ProfilePaymentController]);
 })();

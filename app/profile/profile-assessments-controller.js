@@ -54,10 +54,9 @@
             saveAssessments: _saveAssessments
         };
 
-        var cropYearChangeListener = EventService.sub('SelectedProfileChanged',function(message){
+        EventService.sub($scope, 'SelectedProfileChanged',function(message){
             $scope.model.init();
         });
-        $scope.$on('$destroy', cropYearChangeListener);
 
         $scope.model.init();
     };

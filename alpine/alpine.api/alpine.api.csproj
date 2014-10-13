@@ -145,6 +145,7 @@
     <Compile Include="Controllers\GrowerScheduleController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
+    <Compile Include="Controllers\PayeeController.cs" />
     <Compile Include="Controllers\PaymentScheduleController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\VarietyController.cs" />

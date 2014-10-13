@@ -5,7 +5,7 @@
 (function(){
     'use strict';
 
-    var ProfilePaymentHistoryController = function($scope, CacheService, GrowerService, modalResolveData){
+    var ProfilePaymentHistoryController = function($scope, CacheService, GrowerService, modalResolveData, EventService){
         var _selectedSchedule = {};
         var _selectedPayment = {};
         var _selectedProgressPayment = {};
@@ -73,7 +73,7 @@
                     paymentType: $scope.model.selectedPayment.paymentType,
                     paymentTypeName: $scope.model.selectedPayment.name,
                     amount: $scope.model.selectedGrowerPayment.amount,
-                    transactionDate: $scope.model.selectedGrowerPayment.transactionDate.toLocaleDateString(),
+                    transactionDate: $scope.model.selectedGrowerPayment.transactionDate,
                     note: $scope.model.selectedGrowerPayment.note,
                     applyToPaymentType: $scope.model.selectedProgressPayment.paymentType,
                     Id: $scope.model.selectedGrowerPayment.Id
@@ -93,6 +93,7 @@
 
             GrowerService.saveGrowerPayment(payment).then(function(data){
                $scope.$dismiss();
+                EventService.pub('PaymentTransaction', {});
             });
         };
 
@@ -115,7 +116,9 @@
         }
 
         $scope.model.init();
+
+
     };
 
-    ramAngularApp.module.controller('ProfilePaymentHistoryController', ['$scope', 'CacheService', 'GrowerService', 'modalResolveData', ProfilePaymentHistoryController]);
+    ramAngularApp.module.controller('ProfilePaymentHistoryController', ['$scope', 'CacheService', 'GrowerService', 'modalResolveData', 'EventService', ProfilePaymentHistoryController]);
 })();

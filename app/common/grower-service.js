@@ -141,6 +141,51 @@
             return deferred.promise;
         };
 
+        var _deleteGrowerPayment = function(payment){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+            RestService.deleteData(RestService.URLS.GROWER_PAYMENT + '/' + payment.Id, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_DELETE_RECORD);
+            return deferred.promise;
+        };
+
+        var _updatePayees = function(payees){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+            RestService.postData(RestService.URLS.GROWER_PAYEES + 'update', payees, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_SAVE_RECORD);
+            return deferred.promise;
+        };
+
+        var _updatePayee = function(payee){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+            RestService.putData(RestService.URLS.GROWER_PAYEES + payee.sid, payee, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_SAVE_RECORD);
+            return deferred.promise;
+        };
+
+        var _savePayee = function(payee){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+            RestService.postData(RestService.URLS.GROWER_PAYEES, payee, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_SAVE_RECORD);
+            return deferred.promise;
+        };
+
+        var _deletePayee = function(payee){
+            var deferred = $q.defer();
+            var successCb = function(data){
+                deferred.resolve(data);
+            };
+            RestService.deleteData(RestService.URLS.GROWER_PAYEES + payee.Id, successCb, undefined, Constants.MESSAGES.ERROR.FAILED_DELETE_RECORD);
+            return deferred.promise;
+        };
+
         return {
             getGrowers: _getGrowers,
             getGrowerNotes: _getGrowerNotes,
@@ -155,7 +200,12 @@
             getGrowerSchedule: _getGrowerSchedule,
             updateGrowerSchedule: _updateGrowerSchedule,
             saveGrowerPayment: _saveGrowerPayment,
-            getGrowerPayments: _getGrowerPayments
+            getGrowerPayments: _getGrowerPayments,
+            deleteGrowerPayment: _deleteGrowerPayment,
+            updatePayees: _updatePayees,
+            updatePayee: _updatePayee,
+            savePayee: _savePayee,
+            deletePayee: _deletePayee
         }
     };
 

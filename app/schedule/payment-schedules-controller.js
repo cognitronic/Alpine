@@ -72,10 +72,9 @@
             });
         }
 
-        var cropYearChangeListener = EventService.sub('CropYearChanged',function(message){
+        EventService.sub($scope, 'CropYearChanged',function(message){
             $scope.model.init();
         });
-        $scope.$on('$destroy', cropYearChangeListener);
 
 
 
