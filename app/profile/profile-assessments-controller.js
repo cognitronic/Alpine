@@ -33,9 +33,11 @@
                 console.log($scope.model.availableAssessments[i]);
                 if($scope.model.availableAssessments[i].checked){
                     GrowerService.updateGrowerAssessment($scope.model.availableAssessments[i]);
+                    $scope.model.assessments.push($scope.model.availableAssessments[i]);
                 }
             }
             $scope.$close();
+            $scope.model.init();
         };
 
         var _deleteAssessment = function(assessment){

@@ -5,7 +5,7 @@
 (function(){
     'use strict';
 
-    var ProfilePayeesController = function($scope, CacheService, GrowerService){
+    var ProfilePayeesController = function($scope, CacheService, GrowerService, EventService){
 
         var _selectedPayee = {};
         var _payee = {};
@@ -55,9 +55,11 @@
             savePayee: _savePayee,
             deletePayee: _deletePayee
         }
-
+        EventService.sub($scope, 'SelectedProfileChanged',function(message){
+            $scope.model.init();
+        });
         $scope.model.init();
     };
 
-    ramAngularApp.module.controller('ProfilePayeesController', ['$scope', 'CacheService', 'GrowerService', ProfilePayeesController]);
+    ramAngularApp.module.controller('ProfilePayeesController', ['$scope', 'CacheService', 'GrowerService', 'EventService', ProfilePayeesController]);
 })();
