@@ -20,11 +20,11 @@
                 <li ng-class="{active:$state.includes('root.reports')}">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">Reports<b class="caret"></b></a>
                     <ul class="dropdown-menu">
+                        <!--<li>-->
+                            <!--<a href="" ui-sref="root.reports.grower-payment">Grower Payment Report</a>-->
+                        <!--</li>-->
                         <li>
-                            <a href="" ui-sref="root.reports.grower-payment">Grower Payment Report</a>
-                        </li>
-                        <li>
-                            <a href="" ui-sref="root.reports.label-report">Payee Avery Label Report</a>
+                            <a href="" ng-click="model.runLabelReport()">Payee Avery Label Report</a>
                         </li>
                     </ul>
                 </li>
