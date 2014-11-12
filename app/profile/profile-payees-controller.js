@@ -16,9 +16,11 @@
         };
 
         var _loadPayees = function(){
-            GrowerService.getGrowerPayees(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id).then(function(data){
-                $scope.model.payees = data;
-            });
+            if(CacheService.getItem(CacheService.Items.Profile.selectedGrower) && CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id){
+                GrowerService.getGrowerPayees(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id).then(function(data){
+                    $scope.model.payees = data;
+                });
+            }
         };
 
         var _updatePayees = function(){

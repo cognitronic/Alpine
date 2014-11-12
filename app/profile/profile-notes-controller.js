@@ -38,10 +38,12 @@
 
         var _loadNotes = function(){
             $scope.model.notes = [];
-            GrowerService.getGrowerNotes(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id)
-                .then(function(data){
-                   $scope.model.notes = data;
-                });
+            if(CacheService.getItem(CacheService.Items.Profile.selectedGrower) && CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id){
+                GrowerService.getGrowerNotes(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id)
+                    .then(function(data){
+                        $scope.model.notes = data;
+                    });
+            }
         };
 
         var _formatDate = function(datestring){
@@ -61,7 +63,7 @@
             notes: _notes,
             note: _note,
             formatDate: _formatDate
-        }
+        };
         EventService.sub($scope, 'SelectedProfileChanged',function(message){
             $scope.model.init();
         });

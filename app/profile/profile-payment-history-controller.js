@@ -16,6 +16,7 @@
         var _paymentAmount = 0;
         var _paymentNote = '';
         var _selectedGrowerPayment = {};
+        var _isReadOnly = true;
 
         var _init = function(){
             $scope.model.selectedSchedule = CacheService.getItem(CacheService.Items.Profile.selectedSchedule);
@@ -29,8 +30,27 @@
                     lookup[$scope.model.paymentTypes[i].paymentType] = $scope.model.paymentTypes[i];
                 }
                 $scope.model.selectedPayment = lookup[modalResolveData.editingModel.paymentType];
+                if($scope.model.selectedPayment.paymentType == 5){
+                    $scope.model.showProgressPayments = true;
+                    $scope.model.selectedProgressPayment.name = $scope.model.selectedSchedule.progressPayments[$scope.model.selectedGrowerPayment.applyToPaymentType -1].name;
+                    $scope.model.isReadOnly = false;
+                } else {
+                    $scope.model.isReadOnly = true;
+                }
             }
         };
+
+        var _getProgressPaymentTypeByName = function(name){
+            if(name === undefined){
+                return 0;
+            }
+            var lookup = {};
+            for(var i = 0, len = $scope.model.selectedSchedule.progressPayments.length; i < len; i++){
+                lookup[$scope.model.selectedSchedule.progressPayments[i].name] =$scope.model.selectedSchedule.progressPayments[i];
+            }
+
+            return lookup[name].paymentType;
+        }
 
         var _constructPaymentTypesSelect = function(){
           for(var i = 0, l = $scope.model.selectedSchedule.progressPayments.length; i < l; i++){
@@ -55,8 +75,10 @@
             if(payment.paymentType == 5){
                 $scope.model.showProgressPayments = true;
                 $scope.model.selectedProgressPayment.name = ' Select A Payment ';
+                $scope.model.isReadOnly = false;
             } else {
                 $scope.model.showProgressPayments = false;
+                $scope.model.isReadOnly = true;
             }
         };
 
@@ -66,28 +88,35 @@
 
         var _savePayment = function(){
             var payment = {};
+            var amt = 0;
             if(modalResolveData.editingModel){
+                if($scope.model.selectedGrowerPayment.amount){
+                   amt = $scope.model.selectedGrowerPayment.amount;
+                }
                 payment = {
                     growerId: CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id,
                     cropYear: CacheService.getItem(CacheService.Items.SelectedCropYear),
                     paymentType: $scope.model.selectedPayment.paymentType,
                     paymentTypeName: $scope.model.selectedPayment.name,
-                    amount: $scope.model.selectedGrowerPayment.amount,
+                    amount: amt,
                     transactionDate: $scope.model.selectedGrowerPayment.transactionDate,
                     note: $scope.model.selectedGrowerPayment.note,
-                    applyToPaymentType: $scope.model.selectedProgressPayment.paymentType,
+                    applyToPaymentType: _getProgressPaymentTypeByName($scope.model.selectedProgressPayment.name).paymentType,
                     Id: $scope.model.selectedGrowerPayment.Id
                 };
             } else {
+                if($scope.model.selectedGrowerPayment.amount){
+                    amt = $scope.model.selectedGrowerPayment.amount;
+                }
                 payment = {
                     growerId: CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id,
                     cropYear: CacheService.getItem(CacheService.Items.SelectedCropYear),
                     paymentType: $scope.model.selectedPayment.paymentType,
                     paymentTypeName: $scope.model.selectedPayment.name,
-                    amount: $scope.model.selectedGrowerPayment.amount,
+                    amount: amt,
                     transactionDate: $scope.model.selectedGrowerPayment.transactionDate.toLocaleDateString(),
                     note: $scope.model.selectedGrowerPayment.note,
-                    applyToPaymentType: $scope.model.selectedProgressPayment.paymentType
+                    applyToPaymentType: _getProgressPaymentTypeByName($scope.model.selectedProgressPayment.name).paymentType
                 };
             }
 
@@ -96,6 +125,8 @@
                 EventService.pub('PaymentTransaction', {});
             });
         };
+
+
 
         $scope.model = {
             init: _init,
@@ -112,8 +143,9 @@
             savePayment: _savePayment,
             paymentAmount: _paymentAmount,
             paymentNote: _paymentNote,
+            isReadOnly: _isReadOnly,
             selectedGrowerPayment: _selectedGrowerPayment
-        }
+        };
 
         $scope.model.init();
 

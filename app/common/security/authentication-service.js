@@ -47,7 +47,9 @@
         };
         var _logout = function(){
             CacheService.removeItem(CacheService.Items.SelectedUser.fullProfile);
-            //$rootScope.$broadcast('userLoggedOut', {user: null});
+            CacheService.removeItem(CacheService.Items.Profile.selectedGrower);
+            CacheService.removeItem(CacheService.Items.Profile.selectedSchedule);
+            CacheService.removeItem(CacheService.Items.SelectedCropYear);
             $state.go('root.login');
         };
 

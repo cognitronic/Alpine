@@ -13,11 +13,13 @@
         var _init = function(){
             _loadCropYears();
             _loadGrowers();
+            EventService.pub('SelectedProfileChanged', {'cropyear': CacheService.getItem(CacheService.Items.SelectedCropYear), 'grower': CacheService.getItem(CacheService.Items.Profile.selectedGrower)});
         };
 
         var _loadGrowers = function(){
             GrowerService.getGrowers().then(function(data){
                 $scope.model.growers = data;
+                $scope.model.growers.unshift({name: '-- Select Grower --'});
                 if(CacheService.getItem(CacheService.Items.Profile.selectedGrower)){
                     var lookup = {};
                     for (var i = 0, len = $scope.model.growers.length; i < len; i++) {
@@ -37,14 +39,14 @@
                 if(CacheService.getItem(CacheService.Items.SelectedCropYear)){
                     $scope.model.selectedCropYear = CacheService.getItem(CacheService.Items.SelectedCropYear);
                 } else {
-                    $scope.model.selectedCropYear = $scope.model.cropYears[1];
+                    $scope.model.selectedCropYear = $scope.model.cropYears[1] + '';
                     CacheService.setItem(CacheService.Items.SelectedCropYear, $scope.model.selectedCropYear);
                 }
             });
         };
 
         var _reloadData = function(){
-            CacheService.setItem(CacheService.Items.SelectedCropYear, $scope.model.selectedCropYear);
+            CacheService.setItem(CacheService.Items.SelectedCropYear, ($scope.model.selectedCropYear + '').trim());
             CacheService.setItem(CacheService.Items.Profile.selectedGrower, angular.fromJson($scope.model.selectedGrower));
             EventService.pub('SelectedProfileChanged', {'cropyear': CacheService.getItem(CacheService.Items.SelectedCropYear), 'grower': CacheService.getItem(CacheService.Items.Profile.selectedGrower)});
             //$state.go('root.profile.details');

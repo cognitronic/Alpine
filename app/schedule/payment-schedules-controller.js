@@ -22,11 +22,17 @@
             'progressPaymentDate_ScheduleThree_3',
             'progressPaymentDate_ScheduleThree_4'
         ];
+        var _isNew = false;
 
         var _paymentSchedule = {};
 
         var _init = function(){
             $scope.model.getPaymentSchedules();
+            if($scope.model.paymentSchedules.length < 1){
+                $scope.model.isNew = true;
+            } else {
+                $scope.model.isNew = false;
+            }
         };
 
         //Sets the directive's max variable to today if a date string is not passed in.
@@ -63,12 +69,18 @@
             ScheduleService.getPaymentSchedules(CacheService.getItem(CacheService.Items.SelectedCropYear)).then(function(data){
                 $scope.model.paymentSchedules = data;
             });
-        }
+        };
 
         var _updatePaymentSchedule = function(schedule){
             console.log(schedule);
             ScheduleService.updatePaymentSchedule(schedule.Id, schedule).then(function(data){
                $scope.model.init();
+            });
+        };
+
+        var _savePaymentSchedule = function(){
+            ScheduleService.savePaymentSchedule(CacheService.getItem(CacheService.Items.SelectedCropYear)).then(function(data){
+               $scope.model.paymentSchedules = data;
             });
         }
 
@@ -91,7 +103,9 @@
             toggleMaxDate: _toggleMaxDate,
             datePickerButtons: _datePickerButtons,
             updatePaymentSchedule: _updatePaymentSchedule,
-            paymentSchedule: _paymentSchedule
+            paymentSchedule: _paymentSchedule,
+            isNew: _isNew,
+            savePaymentSchedule: _savePaymentSchedule
         };
 
         $scope.model.init();

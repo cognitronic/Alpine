@@ -1,16 +1,16 @@
 <div class="container view-container">
     <div class="row-fluid">
         <div class="pull-right">
-            <button class="btn btn-success"
-                    type="button"
-                    ram-modal-title="Manage Varieties"
-                    ram-custom-modal="schedule/varieties-modal.html"
-                    ram-modal-controller="VarietiesController">
-                <i class="glyphicon glyphicon-cog"></i> Manage Varieties
-            </button>
-            <!--<button class="btn" type="button"  cc-add-user cc-post-submit-action="model.addAssessment()">-->
-                <!--<i class="glyphicon glyphicon-plus"></i> Add Payment Schedule-->
+            <!--<button class="btn btn-success"-->
+                    <!--type="button"-->
+                    <!--ram-modal-title="Manage Varieties"-->
+                    <!--ram-custom-modal="schedule/varieties-modal.html"-->
+                    <!--ram-modal-controller="VarietiesController">-->
+                <!--<i class="glyphicon glyphicon-cog"></i> Manage Varieties-->
             <!--</button>-->
+            <button ng-hide="model.isNew" class="btn" type="button"  ng-click="model.savePaymentSchedule()">
+                <i class="glyphicon glyphicon-plus"></i> Add Payment Schedule
+            </button>
         </div>
         <h3>Payment Schedules</h3>
         <hr />

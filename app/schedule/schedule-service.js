@@ -41,6 +41,15 @@
             return deferred.promise;
         };
 
+        var _savePaymentSchedule = function(cropYear){
+          var deferred = $q.defer();
+            var success = function(data){
+              deferred.resolve(data);
+            };
+            RestService.postData(RestService.URLS.PUT_PAYMENT_SCHEDULES + cropYear, cropYear, success, undefined, Constants.MESSAGES.ERROR.FAILED_SAVE_RECORD);
+            return deferred.promise;
+        };
+
         return {
             getCropYears: _getCropYears,
             getAssessments: AssessmentService.getAssessments,
@@ -48,7 +57,8 @@
             updateAssessments: AssessmentService.updateAssessments,
             saveAssessment: AssessmentService.saveAssessment,
             getPaymentSchedules: _getPaymentSchedules,
-            updatePaymentSchedule: _updatePaymentSchedule
+            updatePaymentSchedule: _updatePaymentSchedule,
+            savePaymentSchedule: _savePaymentSchedule
         }
     };
 

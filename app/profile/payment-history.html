@@ -22,7 +22,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="payment in model.growerPayments">
+                <tr ng-repeat="payment in model.growerPayments | orderBy: 'paymentTypeName':true">
                     <td>
                         {{ payment.paymentTypeName }}
                     </td>
@@ -36,7 +36,7 @@
                         {{ payment.note }}
                     </td>
                     <td style="text-align: right;">
-                        <button ng-click="model.viewPaymentReport(payment)" class="btn btn-primary">
+                        <button ng-show="payment.paymentType < 5" ng-click="model.viewPaymentReport(payment)" class="btn btn-primary">
                             <i class="glyphicon glyphicon-list-alt"></i> View Report
                         </button>
                         <button

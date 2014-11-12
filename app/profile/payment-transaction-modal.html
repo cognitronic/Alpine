@@ -31,7 +31,7 @@
                 </button>
                 <ul class="dropdown-menu drop-down-menu" role="menu">
                     <li ng-repeat="progressPayment in model.selectedSchedule.progressPayments">
-                        <div ng-click="model.progressPaymentSelected(progressPayment)">
+                        <div ng-model="model.selectedGrowerPayment.applyToPaymentType" ng-click="model.progressPaymentSelected(progressPayment)">
                             <b>{{ progressPayment.name }}</b>
                             <br />
                         </div>
@@ -42,11 +42,11 @@
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-6 form-group">
                 <b>Amount: </b>
-                <input class="form-control" ng-model="model.selectedGrowerPayment.amount"  required />
+                <input class="form-control" ng-disabled="model.isReadOnly" ng-model="model.selectedGrowerPayment.amount" required />
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 form-group">
+            <div class="col-lg-6 col-md-6 col-sm-6 form-group">
                 <b>Transaction Date: </b>
                 <p class="input-group">
                     <input type="text" class="form-control" datepicker-popup="{{'MM/dd/yyyy'}}" ng-model="model.selectedGrowerPayment.transactionDate" is-open="model.opened" ng-required="true" close-text="Close" />

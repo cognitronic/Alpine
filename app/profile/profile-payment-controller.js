@@ -5,21 +5,30 @@
 (function(){
     'use strict';
 
-    var ProfilePaymentController = function($scope, CacheService, GrowerService, EventService){
+    var ProfilePaymentController = function($scope, CacheService, GrowerService, EventService, $window, RestService){
 
         var _growerPayments = [];
         var _selectedGrowerPayment = {};
 
         var _loadPayments = function(){
-            GrowerService.getGrowerPayments(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id, CacheService.getItem(CacheService.Items.SelectedCropYear)).then(function(data){
-                $scope.model.growerPayments = data;
-            });
+            if(CacheService.getItem(CacheService.Items.Profile.selectedGrower) && CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id) {
+                GrowerService.getGrowerPayments(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id, CacheService.getItem(CacheService.Items.SelectedCropYear)).then(function (data) {
+                    $scope.model.growerPayments = data;
+                });
+            }
         };
 
         var _deletePayment = function(payment){
             GrowerService.deleteGrowerPayment(payment).then(function(data){
                 $scope.model.loadPayments();
             });
+        };
+
+        var _viewPaymentReport = function(payment){
+            $window.open(RestService.BASE_REPORTS_URL + 'progressreport?gid=' +
+            CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id +
+            '&cy=' + CacheService.getItem(CacheService.Items.SelectedCropYear) +
+            '&pt=' + payment.paymentType);
         };
 
         var _init = function(){
@@ -30,7 +39,8 @@
             growerPayments: _growerPayments,
             selectedGrowerPayment: _selectedGrowerPayment,
             loadPayments: _loadPayments,
-            deletePayment: _deletePayment
+            deletePayment: _deletePayment,
+            viewPaymentReport: _viewPaymentReport
         };
         $scope.model.init();
 
@@ -42,5 +52,5 @@
         });
     };
 
-    ramAngularApp.module.controller('ProfilePaymentController', ['$scope', 'CacheService', 'GrowerService', 'EventService', ProfilePaymentController]);
+    ramAngularApp.module.controller('ProfilePaymentController', ['$scope', 'CacheService', 'GrowerService', 'EventService', '$window', 'RestService', ProfilePaymentController]);
 })();

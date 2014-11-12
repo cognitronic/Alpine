@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="domain\Assessment.cs" />
+    <Compile Include="domain\CropDelivery.cs" />
     <Compile Include="domain\Grower.cs" />
     <Compile Include="domain\GrowerAssessment.cs" />
     <Compile Include="domain\GrowerPayment.cs" />
+    <Compile Include="domain\GrowerPaymentReport.cs" />
     <Compile Include="domain\GrowerSchedule.cs" />
     <Compile Include="domain\IAssessment.cs" />
     <Compile Include="domain\IPaymentSchedule.cs" />
@@ -58,7 +60,9 @@
     <Compile Include="domain\IVariety.cs" />
     <Compile Include="domain\Note.cs" />
     <Compile Include="domain\Payee.cs" />
+    <Compile Include="domain\PaymentItem.cs" />
     <Compile Include="domain\PaymentSchedule.cs" />
+    <Compile Include="domain\PaymentTypeTotal.cs" />
     <Compile Include="domain\PaymentVariety.cs" />
     <Compile Include="domain\ProgressPayment.cs" />
     <Compile Include="domain\User.cs" />

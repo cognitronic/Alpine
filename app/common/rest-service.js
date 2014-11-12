@@ -9,7 +9,8 @@
     var RestService = function($http, $rootScope, $q, AlertsService, Constants){
 
         var BASE_PUBLIC_URL = 'http://alpine.localhost/',
-            BASE_API_URL = 'http://api.alpine.localhost/api/';
+            BASE_API_URL = 'http://api.alpine.localhost/api/',
+            BASE_REPORTS_URL = 'http://alpinereports.localhost/';
 
         var _URLS = {
             LOGIN_URL: BASE_API_URL + 'login',
@@ -133,7 +134,8 @@
             processError: _processError,
             URLS: _URLS,
             BASE_PUBLIC_URL: BASE_PUBLIC_URL,
-            BASE_API_URL: BASE_API_URL
+            BASE_API_URL: BASE_API_URL,
+            BASE_REPORTS_URL: BASE_REPORTS_URL
         }
     };
 

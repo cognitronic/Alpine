@@ -48,20 +48,22 @@
 
         var _loadGrowerPaymentSchedule = function(){
             var deferred = $q.defer();
-            $scope.model.selectedSchedule = {};
-            GrowerService.getGrowerSchedule(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id, CacheService.getItem(CacheService.Items.SelectedCropYear)).then(function(data){
-               if(data && data.length > 0){
-                   console.log(data);
-                   $scope.model.selectedSchedule = data[0];
-                   CacheService.setItem(CacheService.Items.Profile.selectedSchedule, data[0]);
-                   $scope.model.showSchedule = true;
-                   $scope.model.scheduleAssigned = true;
-               } else {
-                   $scope.model.showSchedule = false;
-                   $scope.model.scheduleAssigned = false;
-               }
-                deferred.resolve(data);
-            });
+            if(CacheService.getItem(CacheService.Items.Profile.selectedGrower) && CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id){
+                $scope.model.selectedSchedule = {};
+                GrowerService.getGrowerSchedule(CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id, CacheService.getItem(CacheService.Items.SelectedCropYear)).then(function(data){
+                    if(data && data.length > 0){
+                        console.log(data);
+                        $scope.model.selectedSchedule = data[0];
+                        CacheService.setItem(CacheService.Items.Profile.selectedSchedule, data[0]);
+                        $scope.model.showSchedule = true;
+                        $scope.model.scheduleAssigned = true;
+                    } else {
+                        $scope.model.showSchedule = false;
+                        $scope.model.scheduleAssigned = false;
+                    }
+                    deferred.resolve(data);
+                });
+            }
             return deferred.promise;
         };
 
@@ -141,7 +143,7 @@
             toggleMinDate: _toggleMinDate,
             toggleMaxDate: _toggleMaxDate,
             datePickerButtons: _datePickerButtons
-        }
+        };
         EventService.sub($scope, 'SelectedProfileChanged',function(message){
             $scope.model.init();
         });

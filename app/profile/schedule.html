@@ -1,8 +1,9 @@
 <div class="container view-container">
     <div class="row-fluid">
         <div ng-hide="model.scheduleAssigned" class="pull-right">
-            <div class="btn-group" dropdown is-open="model.isOpen">
-                <button type="button" class="btn btn-primary dropdown-toggle" ng-click="model.toggleDropdown($event)" ng-disabled="model.disabled">
+            <span class="alert alert-danger" style="margin-right: 5px;"><b>Schedule is not saved until you update! </b></span>
+            <div class="btn-group" dropdown >
+                <button type="button" class="btn btn-primary dropdown-toggle" >
                     {{ model.selectedSchedule.name }} <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu drop-down-menu" role="menu">

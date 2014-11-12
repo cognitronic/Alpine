@@ -21,7 +21,6 @@
                                 class="form-control"
                                 ng-model="model.selectedGrower"
                                 ng-change="model.reloadData()">
-                            <option value="">-- Select Grower --</option>
                             <option ng-repeat=" g in model.growers"
                                     value="{{ g }}"
                                     ng-selected="g == model.selectedGrower">
