@@ -60,6 +60,9 @@
         EventService.sub($scope, 'SelectedProfileChanged',function(message){
             $scope.model.init();
         });
+        EventService.sub($scope, 'payeeSaved', function(message){
+           $scope.model.init();
+        });
         $scope.model.init();
     };
 

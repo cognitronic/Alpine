@@ -5,7 +5,7 @@
                     ram-modal-title="Add Payee"
                     ram-custom-modal="profile/payee-modal.html"
                     ram-post-submit-action="model.loadPayees()"
-                    ram-modal-controller="ProfilePayeesController">
+                    ram-modal-controller="ProfilePayeesModalController">
                 <i class="glyphicon glyphicon-plus"></i> Add Payee
             </button>
             <button class="btn btn-info" type="button"  ng-click="model.updatePayees()">
@@ -87,7 +87,7 @@
                         <div class="col-md-12">
                             <b>Split Percent:</b>
                             <div>
-                                <input style="width: 50px;" class="form-control" ng-model="payee.splitPercent" value="{{ payee.splitPercent }}"/>
+                                <input style="width: 75px;" class="form-control" ng-model="payee.splitPercent" value="{{ payee.splitPercent }}"/>
                             </div>
                         </div>
                         <div class="col-md-12">

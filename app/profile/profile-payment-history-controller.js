@@ -49,8 +49,8 @@
                 lookup[$scope.model.selectedSchedule.progressPayments[i].name] =$scope.model.selectedSchedule.progressPayments[i];
             }
 
-            return lookup[name].paymentType;
-        }
+            return lookup[name];
+        };
 
         var _constructPaymentTypesSelect = function(){
           for(var i = 0, l = $scope.model.selectedSchedule.progressPayments.length; i < l; i++){
