@@ -5,7 +5,7 @@
 (function(){
     'use strict';
 
-    var AlertsService = function(CacheService, Constants){
+    var AlertsService = function(CacheService){
         var _timeout = 10000;
 
         var _autoCloseAlert = function(index){
@@ -51,5 +51,5 @@
         }
     };
 
-    ramAngularApp.module.factory('AlertsService', ['CacheService', 'Constants', AlertsService]);
+    ramAngularApp.module.factory('AlertsService', ['CacheService', AlertsService]);
 })();
