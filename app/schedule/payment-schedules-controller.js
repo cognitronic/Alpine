@@ -73,6 +73,10 @@
 
         var _updatePaymentSchedule = function(schedule){
             console.log(schedule);
+	        for(var i = 0, len = schedule.progressPayments.length; i < len; i++) {
+	        	console.log(schedule.progressPayments[i].paymentDate);
+	        	schedule.progressPayments[i].paymentDate = new Date(schedule.progressPayments[i].paymentDate).toLocaleDateString();
+	        }
             ScheduleService.updatePaymentSchedule(schedule.Id, schedule).then(function(data){
                $scope.model.init();
             });
