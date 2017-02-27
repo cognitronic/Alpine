@@ -5,7 +5,7 @@
 (function(){
     'use strict';
 
-    var ProfilePayeesController = function($scope, CacheService, GrowerService, EventService){
+    var ProfilePayeesController = function($scope, CacheService, GrowerService, EventService, DialogsService){
 
         var _selectedPayee = {};
         var _payee = {};
@@ -24,11 +24,23 @@
         };
 
         var _updatePayees = function(){
+            var _splitTotal = 0;
             for(var i = 0, l = $scope.model.payees.length; i < l; i++){
-                $scope.model.payees[i].sid =$scope.model.payees[i].Id.toString();
-                $scope.model.payees[i].growerId = CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id;
-                GrowerService.updatePayee($scope.model.payees[i]).then(function(data){
+                _splitTotal += ($scope.model.payees[i].splitPercent * 1 );
+            }
+            if(_splitTotal <= 100){
+                for(var i = 0, l = $scope.model.payees.length; i < l; i++){
+                    $scope.model.payees[i].sid =$scope.model.payees[i].Id.toString();
+                    $scope.model.payees[i].growerId = CacheService.getItem(CacheService.Items.Profile.selectedGrower).Id;
+                    GrowerService.updatePayee($scope.model.payees[i]).then(function(data){
 
+                    });
+                }
+            } else {
+                DialogsService.error('Invalid Split Percentage', 'Split Is Over 100%.  Please adjust accordingly').result.then(function(){
+                    console.log('success');
+                }, function(){
+                    console.log('failed');
                 });
             }
         };
@@ -66,5 +78,5 @@
         $scope.model.init();
     };
 
-    ramAngularApp.module.controller('ProfilePayeesController', ['$scope', 'CacheService', 'GrowerService', 'EventService', ProfilePayeesController]);
+    ramAngularApp.module.controller('ProfilePayeesController', ['$scope', 'CacheService', 'GrowerService', 'EventService', 'DialogsService', ProfilePayeesController]);
 })();

@@ -67,7 +67,7 @@ angular.module('dialogs.service',['ui.bootstrap.modal','dialogs.controllers'])
             return {
                 error : function(header,msg){
                     return $modal.open({
-                        templateUrl : '/dialogs/error.html',
+                        templateUrl : '/common/dialog-error.html',
                         controller : 'errorDialogCtrl',
                         backdrop: b,
                         keyboard: k,
@@ -96,7 +96,7 @@ angular.module('dialogs.service',['ui.bootstrap.modal','dialogs.controllers'])
 
                 notify : function(header,msg){
                     return $modal.open({
-                        templateUrl : '/dialogs/notify.html',
+                        templateUrl : '/common/dialog-notify.html',
                         controller : 'notifyDialogCtrl',
                         backdrop: b,
                         keyboard: k,
@@ -110,7 +110,7 @@ angular.module('dialogs.service',['ui.bootstrap.modal','dialogs.controllers'])
 
                 confirm : function(header,msg){
                     return $modal.open({
-                        templateUrl : '/dialogs/confirm.html',
+                        templateUrl : '/common/dialog-confirm.html',
                         controller : 'confirmDialogCtrl',
                         backdrop: b,
                         keyboard: k,

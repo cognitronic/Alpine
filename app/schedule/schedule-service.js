@@ -21,7 +21,7 @@
             deferred.resolve(cy);
 
             return deferred.promise;
-        }
+        };
 
         var _getPaymentSchedules = function(cropYear){
             var deferred = $q.defer();
