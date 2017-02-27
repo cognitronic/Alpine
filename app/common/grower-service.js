@@ -6,7 +6,10 @@
     'use strict';
     var GrowerService = function($q, RestService, Constants, CacheService){
 
-        var _getGrowers = function(){
+	    /**
+         * Calls RestService to pull back full list of growers
+	     */
+	    var _getGrowers = function(){
             var deferred = $q.defer();
             var successCb = function(data){
                 deferred.resolve(data);
